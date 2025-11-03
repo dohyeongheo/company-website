@@ -1,19 +1,50 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { useLanguage } from "../contexts/LanguageContext";
+import { useTranslation } from "../hooks/useTranslation";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isLanguageOpen, setIsLanguageOpen] = useState(false);
+  const languageDropdownRef = useRef(null);
   const location = useLocation();
+  const { language, setLanguage } = useLanguage();
+  const { t } = useTranslation();
 
   const isActive = (path) => location.pathname === path;
 
   const navLinks = [
-    { path: "/", label: "홈" },
-    { path: "/about", label: "회사 소개" },
-    { path: "/services", label: "서비스" },
-    { path: "/portfolio", label: "포트폴리오" },
-    { path: "/contact", label: "연락처" },
+    { path: "/", label: t("nav.home") },
+    { path: "/about", label: t("nav.about") },
+    { path: "/services", label: t("nav.services") },
+    { path: "/portfolio", label: t("nav.portfolio") },
+    { path: "/contact", label: t("nav.contact") },
   ];
+
+  const languages = [
+    { code: "ko", name: "한국어", flag: "🇰🇷" },
+    { code: "en", name: "English", flag: "🇺🇸" },
+    { code: "th", name: "ไทย", flag: "🇹🇭" },
+  ];
+
+  const currentLanguage = languages.find((lang) => lang.code === language) || languages[0];
+
+  // 외부 클릭 시 드롭다운 닫기
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (languageDropdownRef.current && !languageDropdownRef.current.contains(event.target)) {
+        setIsLanguageOpen(false);
+      }
+    };
+
+    if (isLanguageOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isLanguageOpen]);
 
   return (
     <>
