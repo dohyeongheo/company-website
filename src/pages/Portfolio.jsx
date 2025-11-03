@@ -236,15 +236,23 @@ const Portfolio = () => {
             {/* Modal Content */}
             <div className="bg-white rounded-lg overflow-hidden">
               {/* Image */}
-              <div
-                className={`${selectedImage.bg} h-64 sm:h-80 md:h-96 lg:h-[600px] flex flex-col items-center justify-center relative`}
-              >
-                <span className="text-white text-5xl sm:text-6xl md:text-7xl lg:text-9xl font-semibold mb-2 sm:mb-4">
-                  {selectedProject.title.charAt(0)}
-                </span>
-                <span className="text-white text-base sm:text-lg md:text-xl lg:text-2xl font-medium px-4 text-center">
-                  {selectedImage.label}
-                </span>
+              <div className="relative h-64 sm:h-80 md:h-96 lg:h-[600px] bg-gray-100">
+                {selectedImage.src ? (
+                  <img
+                    src={selectedImage.src}
+                    alt={selectedImage.label}
+                    className="w-full h-full object-contain"
+                  />
+                ) : (
+                  <div className={`${selectedImage.bg || 'bg-gray-400'} w-full h-full flex flex-col items-center justify-center`}>
+                    <span className="text-white text-5xl sm:text-6xl md:text-7xl lg:text-9xl font-semibold mb-2 sm:mb-4">
+                      {selectedProject.title.charAt(0)}
+                    </span>
+                    <span className="text-white text-base sm:text-lg md:text-xl lg:text-2xl font-medium px-4 text-center">
+                      {selectedImage.label}
+                    </span>
+                  </div>
+                )}
               </div>
 
               {/* Project Info */}
