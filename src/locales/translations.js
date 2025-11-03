@@ -39,6 +39,13 @@ export const translations = {
       goBack: '이전 페이지로',
       suggestions: '대신 다음 페이지를 확인해보세요:',
     },
+    error: {
+      title: '오류가 발생했습니다',
+      message: '예상치 못한 오류가 발생했습니다. 페이지를 새로고침하거나 홈으로 돌아가주세요.',
+      details: '오류 상세 정보',
+      reset: '다시 시도',
+      goHome: '홈으로 돌아가기',
+    },
     nav: {
       home: '홈',
       about: '회사 소개',
