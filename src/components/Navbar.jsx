@@ -132,22 +132,33 @@ const Navbar = () => {
                   </svg>
                 </button>
 
-                {isLanguageOpen && (
-                  <div className="absolute right-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg z-50">
-                    {languages.map((lang) => (
-                      <button
-                        key={lang.code}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          e.stopPropagation();
-                          console.log("Language clicked (desktop):", lang.code);
-                          setLanguage(lang.code);
-                          setIsLanguageOpen(false);
-                        }}
-                        className={`w-full flex items-center space-x-3 px-4 py-2 text-sm text-left hover:bg-gray-50 transition-colors ${
-                          language === lang.code ? "bg-navy-50 text-navy-900" : "text-gray-700"
-                        }`}
+                    {isLanguageOpen && (
+                      <div 
+                        className="absolute right-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg z-50"
+                        role="menu"
+                        aria-label="언어 선택 메뉴"
                       >
+                        {languages.map((lang) => (
+                          <button
+                            key={lang.code}
+                            onClick={(e) => {
+                              e.preventDefault();
+                              e.stopPropagation();
+                              console.log("Language clicked (desktop):", lang.code);
+                              setLanguage(lang.code);
+                              setIsLanguageOpen(false);
+                            }}
+                            onKeyDown={(e) => {
+                              if (e.key === 'Escape') {
+                                setIsLanguageOpen(false);
+                              }
+                            }}
+                            className={`w-full flex items-center space-x-3 px-4 py-2 text-sm text-left hover:bg-gray-50 transition-colors focus:outline-none focus:bg-gray-50 ${
+                              language === lang.code ? "bg-navy-50 text-navy-900" : "text-gray-700"
+                            }`}
+                            role="menuitem"
+                            aria-selected={language === lang.code}
+                          >
                         <span className="text-lg">{lang.flag}</span>
                         <span>{lang.name}</span>
                         {language === lang.code && (
@@ -170,11 +181,19 @@ const Navbar = () => {
             <div className="md:hidden flex items-center space-x-2">
               {/* Language Selector - Mobile */}
               <div className="relative" ref={languageDropdownRefMobile}>
-                <button
-                  onClick={() => setIsLanguageOpenMobile(!isLanguageOpenMobile)}
-                  className="flex items-center p-2 text-gray-700 hover:text-navy-900 focus:outline-none rounded-md hover:bg-gray-100 transition-colors"
-                  aria-label="언어 선택"
-                >
+                    <button
+                      onClick={() => setIsLanguageOpenMobile(!isLanguageOpenMobile)}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                          e.preventDefault();
+                          setIsLanguageOpenMobile(!isLanguageOpenMobile);
+                        }
+                      }}
+                      className="flex items-center p-2 text-gray-700 hover:text-navy-900 focus:outline-none focus:ring-2 focus:ring-navy-900 focus:ring-offset-2 rounded-md hover:bg-gray-100 transition-colors"
+                      aria-label="언어 선택"
+                      aria-expanded={isLanguageOpenMobile}
+                      aria-haspopup="true"
+                    >
                   <span className="text-lg">{currentLanguage.flag}</span>
                 </button>
 
