@@ -1,6 +1,8 @@
 import { useState } from 'react'
+import { useTranslation } from '../hooks/useTranslation'
 
 const Contact = () => {
+  const { t } = useTranslation()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -25,7 +27,7 @@ const Contact = () => {
 
     // 시뮬레이션을 위한 딜레이
     setTimeout(() => {
-      alert('문의사항이 접수되었습니다. 빠른 시일 내에 연락드리겠습니다.')
+      alert(t('contact.submitSuccess') || '문의사항이 접수되었습니다. 빠른 시일 내에 연락드리겠습니다.')
       setFormData({ name: '', email: '', message: '' })
       setIsSubmitting(false)
     }, 1000)
