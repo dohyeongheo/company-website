@@ -142,16 +142,16 @@ const Navbar = () => {
             {/* Mobile menu button and language selector */}
             <div className="md:hidden flex items-center space-x-2">
               {/* Language Selector - Mobile */}
-              <div className="relative" ref={languageDropdownRef}>
+              <div className="relative" ref={languageDropdownRefMobile}>
                 <button
-                  onClick={() => setIsLanguageOpen(!isLanguageOpen)}
+                  onClick={() => setIsLanguageOpenMobile(!isLanguageOpenMobile)}
                   className="flex items-center p-2 text-gray-700 hover:text-navy-900 focus:outline-none rounded-md hover:bg-gray-100 transition-colors"
                   aria-label="언어 선택"
                 >
                   <span className="text-lg">{currentLanguage.flag}</span>
                 </button>
 
-                {isLanguageOpen && (
+                {isLanguageOpenMobile && (
                   <div className="absolute right-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg z-50">
                     {languages.map((lang) => (
                       <button
@@ -161,7 +161,7 @@ const Navbar = () => {
                           e.stopPropagation();
                           console.log("Language clicked (mobile):", lang.code);
                           setLanguage(lang.code);
-                          setIsLanguageOpen(false);
+                          setIsLanguageOpenMobile(false);
                         }}
                         className={`w-full flex items-center space-x-3 px-4 py-2 text-sm text-left hover:bg-gray-50 transition-colors ${
                           language === lang.code ? "bg-navy-50 text-navy-900" : "text-gray-700"
