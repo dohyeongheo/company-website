@@ -21,12 +21,12 @@ const About = () => {
                   우리 회사는 20XX년 설립 이래, 고객 중심의 혁신적인 서비스를 제공해왔습니다.
                   최고의 품질과 전문성을 바탕으로 고객의 성공을 함께 만들어가고 있습니다.
                 </p>
-                <p className="text-gray-600 text-lg leading-relaxed">
+                <p className="text-gray-600 text-base md:text-lg leading-relaxed">
                   우리의 목표는 단순히 서비스를 제공하는 것이 아니라, 고객의 비즈니스 성장에
                   실질적인 기여를 하는 것입니다. 이를 위해 끊임없는 연구개발과 혁신을 통해
                   최신 기술과 트렌드를 선도하고 있습니다.
                 </p>
-                <p className="text-gray-600 text-lg leading-relaxed">
+                <p className="text-gray-600 text-base md:text-lg leading-relaxed">
                   전문성, 신뢰성, 혁신이라는 핵심 가치를 바탕으로, 고객 여러분과 함께
                   더 나은 미래를 만들어가겠습니다.
                 </p>
