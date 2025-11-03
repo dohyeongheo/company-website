@@ -21,7 +21,7 @@ const Navbar = () => {
       { path: "/portfolio", label: t("nav.portfolio") },
       { path: "/contact", label: t("nav.contact") },
     ],
-    [t, language]
+    [language]
   );
 
   const languages = [
