@@ -309,27 +309,27 @@ const Portfolio = () => {
       )}
 
       {/* Stats Section */}
-      <section className="py-32 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          <h2 className="text-4xl md:text-5xl font-semibold text-center mb-20 text-navy-900 tracking-tight">
+      <section className="py-16 md:py-24 lg:py-32 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-center mb-12 md:mb-16 lg:mb-20 text-navy-900 tracking-tight">
             프로젝트 통계
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 md:gap-12">
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-semibold text-navy-900 mb-4">500+</div>
-              <div className="text-gray-600 text-lg">완료 프로젝트</div>
+              <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-navy-900 mb-2 sm:mb-4">500+</div>
+              <div className="text-gray-600 text-sm sm:text-base md:text-lg">완료 프로젝트</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-semibold text-navy-900 mb-4">1000+</div>
-              <div className="text-gray-600 text-lg">만족 고객</div>
+              <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-navy-900 mb-2 sm:mb-4">1000+</div>
+              <div className="text-gray-600 text-sm sm:text-base md:text-lg">만족 고객</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-semibold text-navy-900 mb-4">50+</div>
-              <div className="text-gray-600 text-lg">수상 경력</div>
+              <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-navy-900 mb-2 sm:mb-4">50+</div>
+              <div className="text-gray-600 text-sm sm:text-base md:text-lg">수상 경력</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-semibold text-navy-900 mb-4">98%</div>
-              <div className="text-gray-600 text-lg">고객 만족도</div>
+              <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-navy-900 mb-2 sm:mb-4">98%</div>
+              <div className="text-gray-600 text-sm sm:text-base md:text-lg">고객 만족도</div>
             </div>
           </div>
         </div>
