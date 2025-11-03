@@ -126,17 +126,17 @@ const About = () => {
             </div>
 
             {/* Vision Card */}
-            <div className="border border-gray-200 rounded-lg p-10 hover:border-navy-900 transition-all duration-300">
-              <div className="bg-gray-100 w-20 h-20 rounded-lg flex items-center justify-center mb-8">
-                <svg className="w-10 h-10 text-navy-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="border border-gray-200 rounded-lg p-6 md:p-8 lg:p-10 hover:border-navy-900 transition-all duration-300">
+              <div className="bg-gray-100 w-16 h-16 md:w-20 md:h-20 rounded-lg flex items-center justify-center mb-6 md:mb-8">
+                <svg className="w-8 h-8 md:w-10 md:h-10 text-navy-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                 </svg>
               </div>
-              <h3 className="text-3xl font-semibold mb-6 text-navy-900">
+              <h3 className="text-2xl md:text-3xl font-semibold mb-4 md:mb-6 text-navy-900">
                 우리의 비전
               </h3>
-              <p className="text-gray-600 text-lg leading-relaxed">
+              <p className="text-gray-600 text-base md:text-lg leading-relaxed">
                 업계를 선도하는 최고의 서비스 제공자가 되어, 고객에게 지속 가능한
                 가치를 제공하고 글로벌 시장에서 인정받는 기업으로 성장하겠습니다.
               </p>
