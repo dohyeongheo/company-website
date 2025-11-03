@@ -22,7 +22,7 @@ const Contact = () => {
 
     // 실제 구현 시 백엔드 API로 전송
     // 예: await fetch('/api/contact', { method: 'POST', body: JSON.stringify(formData) })
-    
+
     // 시뮬레이션을 위한 딜레이
     setTimeout(() => {
       alert('문의사항이 접수되었습니다. 빠른 시일 내에 연락드리겠습니다.')
@@ -66,7 +66,7 @@ const Contact = () => {
                     placeholder="이름을 입력하세요"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-3">
                     이메일 <span className="text-red-500">*</span>
@@ -82,7 +82,7 @@ const Contact = () => {
                     placeholder="email@example.com"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-3">
                     메시지 <span className="text-red-500">*</span>
@@ -98,7 +98,7 @@ const Contact = () => {
                     placeholder="문의하실 내용을 입력하세요"
                   />
                 </div>
-                
+
                 <button
                   type="submit"
                   disabled={isSubmitting}
