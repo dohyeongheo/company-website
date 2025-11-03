@@ -69,13 +69,13 @@ const ErrorFallback = ({ error, onReset }) => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={onReset}
-              className="bg-navy-900 text-white px-8 py-3 rounded-md font-medium hover:bg-navy-800 transition-colors"
+              className="bg-navy-900 text-white px-8 py-3 rounded-md font-medium hover:bg-navy-800 transition-colors focus:outline-none focus:ring-2 focus:ring-navy-900 focus:ring-offset-2"
             >
               {t('error.reset')}
             </button>
             <a
               href="/"
-              className="bg-gray-200 text-navy-900 px-8 py-3 rounded-md font-medium hover:bg-gray-300 transition-colors inline-block"
+              className="bg-gray-200 text-navy-900 px-8 py-3 rounded-md font-medium hover:bg-gray-300 transition-colors inline-block focus:outline-none focus:ring-2 focus:ring-navy-900 focus:ring-offset-2"
             >
               {t('error.goHome')}
             </a>
@@ -87,4 +87,3 @@ const ErrorFallback = ({ error, onReset }) => {
 }
 
 export default ErrorBoundary
-
