@@ -110,13 +110,21 @@ const Navbar = () => {
                 </Link>
               ))}
 
-              {/* Language Selector - Desktop */}
-              <div className="relative" ref={languageDropdownRef}>
-                <button
-                  onClick={() => setIsLanguageOpen(!isLanguageOpen)}
-                  className="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-700 hover:text-navy-900 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors"
-                  aria-label="언어 선택"
-                >
+                  {/* Language Selector - Desktop */}
+                  <div className="relative" ref={languageDropdownRef}>
+                    <button
+                      onClick={() => setIsLanguageOpen(!isLanguageOpen)}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                          e.preventDefault();
+                          setIsLanguageOpen(!isLanguageOpen);
+                        }
+                      }}
+                      className="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-700 hover:text-navy-900 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-navy-900 focus:ring-offset-2"
+                      aria-label="언어 선택"
+                      aria-expanded={isLanguageOpen}
+                      aria-haspopup="true"
+                    >
                   <span className="text-lg">{currentLanguage.flag}</span>
                   <span className="hidden lg:inline">{currentLanguage.name}</span>
                   <svg className={`w-4 h-4 transition-transform ${isLanguageOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
