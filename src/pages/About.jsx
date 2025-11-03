@@ -1,10 +1,23 @@
+import { Helmet } from 'react-helmet-async'
 import { useTranslation } from '../hooks/useTranslation'
 
 const About = () => {
   const { t } = useTranslation()
 
   return (
-    <div className="pt-16 md:pt-20">
+    <>
+      <Helmet>
+        <title>{t('seo.about.title')}</title>
+        <meta name="description" content={t('seo.about.description')} />
+        <meta name="keywords" content={t('seo.about.keywords')} />
+        <meta property="og:title" content={t('seo.about.title')} />
+        <meta property="og:description" content={t('seo.about.description')} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={t('seo.about.title')} />
+        <meta name="twitter:description" content={t('seo.about.description')} />
+      </Helmet>
+      <div className="pt-16 md:pt-20">
       {/* Page Header */}
       <section className="bg-navy-900 text-white py-12 md:py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
