@@ -74,6 +74,19 @@ const Navbar = () => {
     };
   }, [isLanguageOpenMobile]);
 
+  // ESC 키로 드롭다운 닫기
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === 'Escape') {
+        setIsLanguageOpen(false);
+        setIsLanguageOpenMobile(false);
+      }
+    };
+
+    document.addEventListener('keydown', handleEscape);
+    return () => document.removeEventListener('keydown', handleEscape);
+  }, []);
+
   return (
     <>
       <nav className="fixed top-0 left-0 right-0 bg-white border-b border-gray-100 z-50">
