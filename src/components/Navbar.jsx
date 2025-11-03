@@ -34,7 +34,7 @@ const Navbar = () => {
 
   const currentLanguage = languages.find((lang) => lang.code === language) || languages[0];
 
-  // 외부 클릭 시 드롭다운 닫기
+  // 외부 클릭 시 드롭다운 닫기 (데스크톱)
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (languageDropdownRef.current && !languageDropdownRef.current.contains(event.target)) {
@@ -50,6 +50,23 @@ const Navbar = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isLanguageOpen]);
+
+  // 외부 클릭 시 드롭다운 닫기 (모바일)
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (languageDropdownRefMobile.current && !languageDropdownRefMobile.current.contains(event.target)) {
+        setIsLanguageOpenMobile(false);
+      }
+    };
+
+    if (isLanguageOpenMobile) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isLanguageOpenMobile]);
 
   return (
     <>
