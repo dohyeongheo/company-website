@@ -23,3 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
+# Auto commit script (선택사항 - 필요시 주석 해제)
+# auto-commit.cjs
+
