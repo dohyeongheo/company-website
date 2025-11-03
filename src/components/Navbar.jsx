@@ -134,7 +134,10 @@ const Navbar = () => {
                     {languages.map((lang) => (
                       <button
                         key={lang.code}
-                        onClick={() => {
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          console.log('Language clicked (mobile):', lang.code);
                           setLanguage(lang.code);
                           setIsLanguageOpen(false);
                         }}
