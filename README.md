@@ -42,6 +42,32 @@ npm run build
 
 빌드된 파일은 `dist` 폴더에 생성됩니다.
 
+## 자동 커밋 설정
+
+이 프로젝트에는 파일 변경사항을 자동으로 감지하고 커밋하는 스크립트가 포함되어 있습니다.
+
+### 자동 커밋 실행
+
+```bash
+npm run auto-commit
+```
+
+이 명령을 실행하면 5초마다 파일 변경사항을 확인하고 자동으로 커밋합니다.
+
+**참고:** 자동 커밋 스크립트는 별도의 터미널 창에서 실행해야 합니다. 개발 서버(`npm run dev`)와 함께 실행하려면:
+
+1. 첫 번째 터미널: `npm run dev`
+2. 두 번째 터미널: `npm run auto-commit`
+
+### Git 설정
+
+프로젝트는 이미 Git으로 초기화되어 있습니다. Git 사용자 정보를 설정하려면:
+
+```bash
+git config user.name "Your Name"
+git config user.email "your.email@example.com"
+```
+
 ## 기술 스택
 
 - **React** - UI 라이브러리
@@ -60,11 +86,12 @@ npm run build
 │   │   ├── Home.jsx        # 홈 페이지
 │   │   ├── About.jsx       # 회사 소개
 │   │   ├── Services.jsx    # 서비스
-│   │   ├── Portfolio.jsx   # 포트폴리오
+│   │   ├── Portfolio.jsx  # 포트폴리오
 │   │   └── Contact.jsx     # 연락처
 │   ├── App.jsx             # 메인 앱 컴포넌트
 │   ├── main.jsx            # 진입점
 │   └── index.css           # 전역 스타일
+├── auto-commit.cjs         # 자동 커밋 스크립트
 ├── index.html
 ├── package.json
 ├── tailwind.config.js
@@ -86,3 +113,11 @@ npm run build
 
 `src/components/Footer.jsx`와 `src/pages/Contact.jsx`에서 연락처 정보를 수정할 수 있습니다.
 
+## Git 커밋
+
+이 프로젝트의 변경사항은 자동 커밋 스크립트를 통해 추적됩니다. 수동으로 커밋하려면:
+
+```bash
+git add .
+git commit -m "커밋 메시지"
+```

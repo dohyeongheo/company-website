@@ -6,22 +6,22 @@ let isRunning = false;
 // 파일 변경 감지 및 자동 커밋 함수
 function checkAndCommit() {
   if (isRunning) return;
-  
+
   try {
     isRunning = true;
-    
+
     // 변경사항이 있는지 확인
     execSync('git add .', { stdio: 'ignore' });
     const status = execSync('git status --porcelain', { encoding: 'utf-8' });
-    
+
     if (status.trim()) {
       const timestamp = new Date().toLocaleString('ko-KR');
       const commitMessage = `Auto commit: ${timestamp}`;
-      
+
       console.log(`\n[${timestamp}] 변경사항 감지, 커밋 실행 중...`);
       console.log('변경된 파일:');
       console.log(status);
-      
+
       execSync(`git commit -m "${commitMessage}"`, { stdio: 'inherit' });
       console.log(`✅ 커밋 완료: ${commitMessage}\n`);
     }
