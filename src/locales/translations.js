@@ -31,6 +31,14 @@ export const translations = {
         keywords: '연락처, 문의, 위치, 주소, 전화번호, 이메일, 오시는 길',
       },
     },
+    notFound: {
+      title: '페이지를 찾을 수 없습니다',
+      description: '요청하신 페이지를 찾을 수 없습니다.',
+      message: '죄송합니다. 요청하신 페이지를 찾을 수 없습니다. 페이지가 이동되었거나 삭제되었을 수 있습니다.',
+      goHome: '홈으로 돌아가기',
+      goBack: '이전 페이지로',
+      suggestions: '대신 다음 페이지를 확인해보세요:',
+    },
     nav: {
       home: '홈',
       about: '회사 소개',
@@ -254,6 +262,14 @@ export const translations = {
         description: 'Please feel free to contact us if you have any questions. We are located at 123 Teheran-ro, Gangnam-gu, Seoul, South Korea.',
         keywords: 'contact, inquiry, location, address, phone number, email, directions',
       },
+    },
+    notFound: {
+      title: 'Page Not Found',
+      description: 'The requested page could not be found.',
+      message: 'Sorry, we could not find the page you are looking for. The page may have been moved or deleted.',
+      goHome: 'Go to Home',
+      goBack: 'Go Back',
+      suggestions: 'You might want to try these pages instead:',
     },
     nav: {
       home: 'Home',
