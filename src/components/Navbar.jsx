@@ -94,7 +94,7 @@ const Navbar = () => {
                         onClick={(e) => {
                           e.preventDefault();
                           e.stopPropagation();
-                          console.log('Language clicked (desktop):', lang.code);
+                          console.log("Language clicked (desktop):", lang.code);
                           setLanguage(lang.code);
                           setIsLanguageOpen(false);
                         }}
