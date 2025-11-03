@@ -103,23 +103,23 @@ const About = () => {
       </section>
 
       {/* Vision & Mission Section */}
-      <section className="py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          <h2 className="text-4xl md:text-5xl font-semibold text-center mb-20 text-navy-900 tracking-tight">
+      <section className="py-16 md:py-24 lg:py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-center mb-12 md:mb-16 lg:mb-20 text-navy-900 tracking-tight">
             회사 비전과 미션
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-10">
             {/* Mission Card */}
-            <div className="border border-gray-200 rounded-lg p-10 hover:border-navy-900 transition-all duration-300">
-              <div className="bg-gray-100 w-20 h-20 rounded-lg flex items-center justify-center mb-8">
+            <div className="border border-gray-200 rounded-lg p-6 md:p-8 lg:p-10 hover:border-navy-900 transition-all duration-300">
+              <div className="bg-gray-100 w-16 h-16 md:w-20 md:h-20 rounded-lg flex items-center justify-center mb-6 md:mb-8">
                 <svg className="w-10 h-10 text-navy-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
-              <h3 className="text-3xl font-semibold mb-6 text-navy-900">
+              <h3 className="text-2xl md:text-3xl font-semibold mb-4 md:mb-6 text-navy-900">
                 우리의 미션
               </h3>
-              <p className="text-gray-600 text-lg leading-relaxed">
+              <p className="text-gray-600 text-base md:text-lg leading-relaxed">
                 고객의 성공이 곧 우리의 성공입니다. 최고의 품질과 서비스로
                 고객의 비즈니스 가치를 극대화하고, 함께 성장하는 파트너가 되겠습니다.
               </p>
