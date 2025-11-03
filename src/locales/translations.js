@@ -1,5 +1,36 @@
 export const translations = {
   ko: {
+    seo: {
+      companyName: 'Company',
+      defaultTitle: 'Company - 혁신과 신뢰의 파트너',
+      defaultDescription: '최고의 품질과 서비스로 고객의 성공을 함께 만들어가는 전문 IT 서비스 기업입니다. 웹 개발, 모바일 앱, 클라우드 솔루션, 데이터 분석 등 다양한 서비스를 제공합니다.',
+      defaultKeywords: '회사 소개, IT 서비스, 웹 개발, 모바일 앱, 클라우드 솔루션, 데이터 분석, 비즈니스 컨설팅, 소프트웨어 개발',
+      home: {
+        title: 'Company - 혁신과 신뢰의 파트너',
+        description: '최고의 품질과 서비스로 고객의 성공을 함께 만들어가는 전문 IT 서비스 기업입니다. 웹 개발, 모바일 앱, 클라우드 솔루션을 제공합니다.',
+        keywords: '회사 소개, IT 서비스, 웹 개발, 모바일 앱, 전문 서비스, 혁신',
+      },
+      about: {
+        title: '회사 소개 - Company',
+        description: '20XX년 설립 이래 고객 중심의 혁신적인 서비스를 제공해온 Company입니다. 전문성, 신뢰성, 혁신을 바탕으로 고객의 성공을 함께 만들어갑니다.',
+        keywords: '회사 소개, 회사 연혁, 회사 비전, 대표 인사말, 기업 문화',
+      },
+      services: {
+        title: '서비스 - Company',
+        description: '웹 개발, 모바일 앱 개발, UI/UX 디자인, 클라우드 솔루션, 데이터 분석, 비즈니스 컨설팅 등 고객의 성공을 위한 다양한 서비스를 제공합니다.',
+        keywords: '웹 개발, 모바일 앱, UI/UX 디자인, 클라우드, 데이터 분석, 비즈니스 컨설팅, IT 서비스',
+      },
+      portfolio: {
+        title: '포트폴리오 - Company',
+        description: '성공적으로 완료한 프로젝트 포트폴리오를 확인하세요. E-Commerce 플랫폼, 모바일 헬스케어 앱, 기업 관리 시스템 등 다양한 프로젝트 경험을 보유하고 있습니다.',
+        keywords: '포트폴리오, 프로젝트 사례, 성공 사례, 웹 개발 프로젝트, 앱 개발 프로젝트',
+      },
+      contact: {
+        title: '연락처 - Company',
+        description: '궁금한 사항이 있으시면 언제든지 문의해주세요. 서울특별시 강남구 테헤란로 123에 위치하고 있습니다.',
+        keywords: '연락처, 문의, 위치, 주소, 전화번호, 이메일, 오시는 길',
+      },
+    },
     nav: {
       home: '홈',
       about: '회사 소개',
