@@ -72,9 +72,9 @@ const Services = () => {
       {/* Page Header */}
       <section className="bg-navy-900 text-white py-12 md:py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-center tracking-tight">서비스</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-center tracking-tight">{t('services.title')}</h1>
           <p className="text-base sm:text-lg md:text-xl text-center mt-4 md:mt-8 text-gray-300 max-w-2xl mx-auto px-4">
-            고객의 성공을 위한 다양한 서비스를 제공합니다
+            {t('services.subtitle')}
           </p>
         </div>
       </section>
@@ -92,10 +92,10 @@ const Services = () => {
                   {service.icon}
                 </div>
                 <h3 className="text-xl md:text-2xl font-semibold mb-4 md:mb-6 text-navy-900">
-                  {service.title}
+                  {t(service.titleKey)}
                 </h3>
                 <p className="text-gray-600 leading-relaxed text-base md:text-lg">
-                  {service.description}
+                  {t(service.descKey)}
                 </p>
               </div>
             ))}
