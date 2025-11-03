@@ -124,7 +124,22 @@ const Contact = () => {
             {/* Email Contact Form */}
             <div className="border border-gray-200 rounded-lg p-6 md:p-8 lg:p-10">
               <h2 className="text-2xl md:text-3xl font-semibold mb-8 md:mb-10 text-navy-900">{t('contact.emailInquiry')}</h2>
-              <form onSubmit={handleSubmit} className="space-y-8">
+              
+              {/* 성공 메시지 */}
+              {submitSuccess && (
+                <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-md">
+                  <p className="text-green-800 text-sm font-medium">{t('contact.submitSuccess')}</p>
+                </div>
+              )}
+
+              {/* 제출 에러 메시지 */}
+              {errors.submit && (
+                <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-md">
+                  <p className="text-red-800 text-sm font-medium">{errors.submit}</p>
+                </div>
+              )}
+
+              <form onSubmit={handleSubmit} className="space-y-8" noValidate>
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-3">
                     {t('contact.name')} <span className="text-red-500">*</span>
@@ -135,10 +150,18 @@ const Contact = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-navy-900 focus:border-transparent transition-all"
+                    className={`w-full px-4 py-3 border rounded-md focus:ring-2 focus:ring-navy-900 focus:border-transparent transition-all ${
+                      errors.name ? 'border-red-500' : 'border-gray-300'
+                    }`}
                     placeholder={t('contact.namePlaceholder')}
+                    aria-invalid={errors.name ? 'true' : 'false'}
+                    aria-describedby={errors.name ? 'name-error' : undefined}
                   />
+                  {errors.name && (
+                    <p id="name-error" className="mt-2 text-sm text-red-600" role="alert">
+                      {errors.name}
+                    </p>
+                  )}
                 </div>
 
                 <div>
@@ -151,10 +174,18 @@ const Contact = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-navy-900 focus:border-transparent transition-all"
+                    className={`w-full px-4 py-3 border rounded-md focus:ring-2 focus:ring-navy-900 focus:border-transparent transition-all ${
+                      errors.email ? 'border-red-500' : 'border-gray-300'
+                    }`}
                     placeholder={t('contact.emailPlaceholder')}
+                    aria-invalid={errors.email ? 'true' : 'false'}
+                    aria-describedby={errors.email ? 'email-error' : undefined}
                   />
+                  {errors.email && (
+                    <p id="email-error" className="mt-2 text-sm text-red-600" role="alert">
+                      {errors.email}
+                    </p>
+                  )}
                 </div>
 
                 <div>
@@ -166,17 +197,25 @@ const Contact = () => {
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    required
                     rows="8"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-navy-900 focus:border-transparent transition-all resize-none"
+                    className={`w-full px-4 py-3 border rounded-md focus:ring-2 focus:ring-navy-900 focus:border-transparent transition-all resize-none ${
+                      errors.message ? 'border-red-500' : 'border-gray-300'
+                    }`}
                     placeholder={t('contact.messagePlaceholder')}
+                    aria-invalid={errors.message ? 'true' : 'false'}
+                    aria-describedby={errors.message ? 'message-error' : undefined}
                   />
+                  {errors.message && (
+                    <p id="message-error" className="mt-2 text-sm text-red-600" role="alert">
+                      {errors.message}
+                    </p>
+                  )}
                 </div>
 
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-navy-900 text-white py-4 rounded-md font-medium hover:bg-navy-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-navy-900 text-white py-4 rounded-md font-medium hover:bg-navy-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-navy-900 focus:ring-offset-2"
                 >
                   {isSubmitting ? t('contact.submitting') : t('contact.submit')}
                 </button>
