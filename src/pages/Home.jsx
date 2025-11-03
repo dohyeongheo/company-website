@@ -1,11 +1,24 @@
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import { useTranslation } from '../hooks/useTranslation'
 
 const Home = () => {
   const { t } = useTranslation()
 
   return (
-    <div className="pt-16 md:pt-20">
+    <>
+      <Helmet>
+        <title>{t('seo.home.title')}</title>
+        <meta name="description" content={t('seo.home.description')} />
+        <meta name="keywords" content={t('seo.home.keywords')} />
+        <meta property="og:title" content={t('seo.home.title')} />
+        <meta property="og:description" content={t('seo.home.description')} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={t('seo.home.title')} />
+        <meta name="twitter:description" content={t('seo.home.description')} />
+      </Helmet>
+      <div className="pt-16 md:pt-20">
       {/* Hero Section */}
       <section className="bg-navy-900 text-white py-16 md:py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
@@ -97,7 +110,8 @@ const Home = () => {
           </Link>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   )
 }
 
