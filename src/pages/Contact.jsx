@@ -115,7 +115,7 @@ const Contact = () => {
             <div className="space-y-8">
               {/* Contact Information */}
               <div className="border border-gray-200 rounded-lg p-6 md:p-8 lg:p-10">
-                <h2 className="text-2xl md:text-3xl font-semibold mb-8 md:mb-10 text-navy-900">연락처 정보</h2>
+                <h2 className="text-2xl md:text-3xl font-semibold mb-8 md:mb-10 text-navy-900">{t('contact.contactInfo')}</h2>
                 <div className="space-y-8">
                   {/* Address */}
                   <div className="flex items-start">
@@ -126,10 +126,10 @@ const Contact = () => {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-navy-900 mb-2 text-lg">주소</h3>
+                      <h3 className="font-semibold text-navy-900 mb-2 text-lg">{t('contact.address')}</h3>
                       <p className="text-gray-600 text-lg leading-relaxed">
-                        서울특별시 강남구 테헤란로 123<br />
-                        테헤란빌딩 5층
+                        {t('contact.addressText')}<br />
+                        {t('contact.addressText2')}
                       </p>
                       <a
                         href="https://maps.google.com/?q=서울특별시+강남구+테헤란로+123"
@@ -137,7 +137,7 @@ const Contact = () => {
                         rel="noopener noreferrer"
                         className="text-navy-900 hover:text-navy-700 text-sm font-medium mt-2 inline-block"
                       >
-                        구글 맵에서 보기 →
+                        {t('contact.viewOnMap')}
                       </a>
                     </div>
                   </div>
@@ -150,14 +150,14 @@ const Contact = () => {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-navy-900 mb-2 text-lg">전화번호</h3>
+                      <h3 className="font-semibold text-navy-900 mb-2 text-lg">{t('contact.phone')}</h3>
                       <a
                         href="tel:02-1234-5678"
                         className="text-gray-600 text-lg hover:text-navy-900 transition-colors"
                       >
-                        02-1234-5678
+                        {t('contact.phoneNumber')}
                       </a>
-                      <p className="text-gray-500 text-sm mt-1">월-금: 09:00 - 18:00</p>
+                      <p className="text-gray-500 text-sm mt-1">{t('contact.weekdays')}</p>
                     </div>
                   </div>
 
@@ -169,12 +169,12 @@ const Contact = () => {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-navy-900 mb-2 text-lg">이메일</h3>
+                      <h3 className="font-semibold text-navy-900 mb-2 text-lg">{t('contact.contactEmail')}</h3>
                       <a
                         href="mailto:info@company.com"
                         className="text-gray-600 text-lg hover:text-navy-900 transition-colors"
                       >
-                        info@company.com
+                        {t('contact.emailAddress')}
                       </a>
                     </div>
                   </div>
@@ -187,9 +187,9 @@ const Contact = () => {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-navy-900 mb-2 text-lg">영업 시간</h3>
-                      <p className="text-gray-600 text-lg">월-금: 09:00 - 18:00</p>
-                      <p className="text-gray-600 text-lg">토-일: 휴무</p>
+                      <h3 className="font-semibold text-navy-900 mb-2 text-lg">{t('contact.businessHours')}</h3>
+                      <p className="text-gray-600 text-lg">{t('contact.weekdays')}</p>
+                      <p className="text-gray-600 text-lg">{t('contact.weekend')}</p>
                     </div>
                   </div>
                 </div>
@@ -197,7 +197,7 @@ const Contact = () => {
 
               {/* Google Maps */}
               <div className="border border-gray-200 rounded-lg p-6 md:p-8 lg:p-10">
-                <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-navy-900">위치</h2>
+                <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-navy-900">{t('contact.location')}</h2>
                 <div className="rounded-lg overflow-hidden">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.677273682431!2d127.02902631531139!3d37.50041787980728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca1580a9d74d3%3A0x5fb8a2f8e0e0e0e0!2z7Iug7ISc7Jq47Yq567OE7IucIOqwleuCqOq1rCDrgrDrrLTroZwg64Ko64-E7ZWY6rWtIDUw!5e0!3m2!1sko!2skr!4v1234567890123!5m2!1sko!2skr"
@@ -207,12 +207,12 @@ const Contact = () => {
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="회사 위치 지도"
+                    title={t('contact.location')}
                     className="w-full md:h-[400px]"
                   />
                 </div>
                 <p className="text-gray-600 text-sm md:text-base mt-4">
-                  서울특별시 강남구 테헤란로 123, 테헤란빌딩 5층
+                  {t('contact.addressText')}, {t('contact.addressText2')}
                 </p>
               </div>
             </div>
