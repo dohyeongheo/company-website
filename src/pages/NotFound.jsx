@@ -23,7 +23,7 @@ const NotFound = () => {
               {t('notFound.message')}
             </p>
           </div>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/"
