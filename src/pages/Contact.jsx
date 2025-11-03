@@ -48,8 +48,8 @@ const Contact = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
             {/* Email Contact Form */}
-            <div className="border border-gray-200 rounded-lg p-10">
-              <h2 className="text-3xl font-semibold mb-10 text-navy-900">이메일 문의</h2>
+            <div className="border border-gray-200 rounded-lg p-6 md:p-8 lg:p-10">
+              <h2 className="text-2xl md:text-3xl font-semibold mb-8 md:mb-10 text-navy-900">이메일 문의</h2>
               <form onSubmit={handleSubmit} className="space-y-8">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-3">
@@ -112,8 +112,8 @@ const Contact = () => {
             {/* Contact Info & Map */}
             <div className="space-y-8">
               {/* Contact Information */}
-              <div className="border border-gray-200 rounded-lg p-10">
-                <h2 className="text-3xl font-semibold mb-10 text-navy-900">연락처 정보</h2>
+              <div className="border border-gray-200 rounded-lg p-6 md:p-8 lg:p-10">
+                <h2 className="text-2xl md:text-3xl font-semibold mb-8 md:mb-10 text-navy-900">연락처 정보</h2>
                 <div className="space-y-8">
                   {/* Address */}
                   <div className="flex items-start">
