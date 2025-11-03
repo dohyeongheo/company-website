@@ -1,17 +1,17 @@
 const About = () => {
   return (
-    <div className="pt-20">
+    <div className="pt-16 md:pt-20">
       {/* Page Header */}
-      <section className="bg-navy-900 text-white py-24">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          <h1 className="text-5xl md:text-6xl font-semibold text-center tracking-tight">회사 소개</h1>
+      <section className="bg-navy-900 text-white py-12 md:py-16 lg:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-center tracking-tight">회사 소개</h1>
         </div>
       </section>
 
       {/* Company Overview */}
-      <section className="py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+      <section className="py-16 md:py-24 lg:py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 lg:gap-20 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-semibold mb-10 text-navy-900 tracking-tight">
                 우리는 누구인가요?
