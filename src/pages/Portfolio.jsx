@@ -61,7 +61,7 @@ const Portfolio = () => {
         label: t(`portfolio.projects.${key}.images.${img.key}`),
       })),
     }))
-  }, [t, language])
+  }, [language, t])
 
   const openModal = (project, image) => {
     setSelectedProject(project)
