@@ -224,6 +224,37 @@ export const translations = {
     },
   },
   en: {
+    seo: {
+      companyName: 'Company',
+      defaultTitle: 'Company - Innovation and Trust Partner',
+      defaultDescription: 'A professional IT service company that creates customer success together with the highest quality and service. We provide various services including web development, mobile apps, cloud solutions, and data analysis.',
+      defaultKeywords: 'company introduction, IT services, web development, mobile app, cloud solutions, data analysis, business consulting, software development',
+      home: {
+        title: 'Company - Innovation and Trust Partner',
+        description: 'A professional IT service company that creates customer success together with the highest quality and service. We provide web development, mobile apps, and cloud solutions.',
+        keywords: 'company introduction, IT services, web development, mobile app, professional services, innovation',
+      },
+      about: {
+        title: 'About Us - Company',
+        description: 'Company has been providing innovative customer-centered services since its establishment in 20XX. We build customer success together based on professionalism, reliability, and innovation.',
+        keywords: 'about us, company history, company vision, CEO message, corporate culture',
+      },
+      services: {
+        title: 'Services - Company',
+        description: 'We provide various services for customer success including web development, mobile app development, UI/UX design, cloud solutions, data analysis, and business consulting.',
+        keywords: 'web development, mobile app, UI/UX design, cloud, data analysis, business consulting, IT services',
+      },
+      portfolio: {
+        title: 'Portfolio - Company',
+        description: 'Check out our successfully completed project portfolio. We have experience in various projects including E-Commerce platforms, mobile healthcare apps, and enterprise management systems.',
+        keywords: 'portfolio, project cases, success stories, web development projects, app development projects',
+      },
+      contact: {
+        title: 'Contact - Company',
+        description: 'Please feel free to contact us if you have any questions. We are located at 123 Teheran-ro, Gangnam-gu, Seoul, South Korea.',
+        keywords: 'contact, inquiry, location, address, phone number, email, directions',
+      },
+    },
     nav: {
       home: 'Home',
       about: 'About',
