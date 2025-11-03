@@ -10,28 +10,87 @@ const Contact = () => {
     message: '',
   })
 
+  const [errors, setErrors] = useState({})
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitSuccess, setSubmitSuccess] = useState(false)
+
+  // 이메일 유효성 검사
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    return emailRegex.test(email)
+  }
+
+  // 폼 유효성 검사
+  const validateForm = () => {
+    const newErrors = {}
+
+    if (!formData.name.trim()) {
+      newErrors.name = t('contact.errors.nameRequired')
+    } else if (formData.name.trim().length < 2) {
+      newErrors.name = t('contact.errors.nameMinLength')
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = t('contact.errors.emailRequired')
+    } else if (!validateEmail(formData.email)) {
+      newErrors.email = t('contact.errors.emailInvalid')
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = t('contact.errors.messageRequired')
+    } else if (formData.message.trim().length < 10) {
+      newErrors.message = t('contact.errors.messageMinLength')
+    }
+
+    setErrors(newErrors)
+    return Object.keys(newErrors).length === 0
+  }
 
   const handleChange = (e) => {
+    const { name, value } = e.target
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [name]: value,
     })
+    // 실시간 유효성 검사 - 에러가 있을 때만
+    if (errors[name]) {
+      setErrors({
+        ...errors,
+        [name]: '',
+      })
+    }
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    
+    if (!validateForm()) {
+      return
+    }
+
     setIsSubmitting(true)
+    setSubmitSuccess(false)
 
-    // 실제 구현 시 백엔드 API로 전송
-    // 예: await fetch('/api/contact', { method: 'POST', body: JSON.stringify(formData) })
+    try {
+      // 실제 구현 시 백엔드 API로 전송
+      // 예: await fetch('/api/contact', { method: 'POST', body: JSON.stringify(formData) })
 
-    // 시뮬레이션을 위한 딜레이
-    setTimeout(() => {
-      alert(t('contact.submitSuccess'))
+      // 시뮬레이션을 위한 딜레이
+      await new Promise((resolve) => setTimeout(resolve, 1000))
+      
+      setSubmitSuccess(true)
       setFormData({ name: '', email: '', message: '' })
+      setErrors({})
+      
+      // 3초 후 성공 메시지 숨기기
+      setTimeout(() => {
+        setSubmitSuccess(false)
+      }, 3000)
+    } catch (error) {
+      setErrors({ submit: t('contact.errors.submitFailed') })
+    } finally {
       setIsSubmitting(false)
-    }, 1000)
+    }
   }
 
   return (
