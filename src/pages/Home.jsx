@@ -2,27 +2,27 @@ import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
-    <div className="pt-20">
+    <div className="pt-16 md:pt-20">
       {/* Hero Section */}
-      <section className="bg-navy-900 text-white py-32">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <section className="bg-navy-900 text-white py-16 md:py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
           <div className="text-center">
-            <h1 className="text-5xl md:text-7xl font-semibold mb-8 tracking-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-semibold mb-6 md:mb-8 tracking-tight">
               혁신과 신뢰의 파트너
             </h1>
-            <p className="text-xl md:text-2xl mb-12 text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 md:mb-12 text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
               최고의 품질과 서비스로 고객의 성공을 함께 만들어갑니다
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center px-4">
               <Link
                 to="/about"
-                className="bg-white text-navy-900 px-10 py-4 rounded-md font-medium hover:bg-gray-100 transition-colors"
+                className="bg-white text-navy-900 px-8 sm:px-10 py-3 sm:py-4 rounded-md font-medium hover:bg-gray-100 transition-colors text-sm sm:text-base"
               >
                 회사 소개
               </Link>
               <Link
                 to="/contact"
-                className="bg-navy-700 text-white px-10 py-4 rounded-md font-medium hover:bg-navy-600 transition-colors border border-navy-600"
+                className="bg-navy-700 text-white px-8 sm:px-10 py-3 sm:py-4 rounded-md font-medium hover:bg-navy-600 transition-colors border border-navy-600 text-sm sm:text-base"
               >
                 문의하기
               </Link>
@@ -32,12 +32,12 @@ const Home = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          <h2 className="text-4xl md:text-5xl font-semibold text-center mb-20 text-navy-900 tracking-tight">
+      <section className="py-16 md:py-24 lg:py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-center mb-12 md:mb-16 lg:mb-20 text-navy-900 tracking-tight">
             우리의 강점
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
             <div className="text-center">
               <div className="bg-gray-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-8">
                 <svg className="w-10 h-10 text-navy-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
