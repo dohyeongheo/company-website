@@ -170,6 +170,7 @@ export const translations = {
       messagePlaceholder: '문의하실 내용을 입력하세요',
       submit: '제출하기',
       submitting: '전송 중...',
+      submitSuccess: '문의사항이 접수되었습니다. 빠른 시일 내에 연락드리겠습니다.',
       contactInfo: '연락처 정보',
       address: '주소',
       phone: '전화번호',
