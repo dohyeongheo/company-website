@@ -107,21 +107,16 @@ const Services = () => {
       <section className="py-16 md:py-24 lg:py-32 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-center mb-12 md:mb-16 lg:mb-20 text-navy-900 tracking-tight">
-            작업 프로세스
+            {t('services.processTitle')}
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 lg:gap-12">
-            {[
-              { step: '1', title: '상담', desc: '고객 요구사항 분석 및 상담' },
-              { step: '2', title: '기획', desc: '전략 수립 및 계획 수립' },
-              { step: '3', title: '개발', desc: '전문가들이 최고 품질로 개발' },
-              { step: '4', title: '유지보수', desc: '지속적인 지원 및 개선' },
-            ].map((process, index) => (
+            {processes.map((process, index) => (
               <div key={index} className="text-center">
                 <div className="bg-navy-900 text-white w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center text-2xl md:text-3xl font-semibold mx-auto mb-4 md:mb-6 lg:mb-8">
                   {process.step}
                 </div>
-                <h3 className="text-lg md:text-xl lg:text-2xl font-semibold mb-2 md:mb-3 lg:mb-4 text-navy-900">{process.title}</h3>
-                <p className="text-gray-600 text-sm sm:text-base md:text-lg">{process.desc}</p>
+                <h3 className="text-lg md:text-xl lg:text-2xl font-semibold mb-2 md:mb-3 lg:mb-4 text-navy-900">{t(process.titleKey)}</h3>
+                <p className="text-gray-600 text-sm sm:text-base md:text-lg">{t(process.descKey)}</p>
               </div>
             ))}
           </div>
