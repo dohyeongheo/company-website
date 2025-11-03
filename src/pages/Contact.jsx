@@ -51,11 +51,11 @@ const Contact = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
             {/* Email Contact Form */}
             <div className="border border-gray-200 rounded-lg p-6 md:p-8 lg:p-10">
-              <h2 className="text-2xl md:text-3xl font-semibold mb-8 md:mb-10 text-navy-900">이메일 문의</h2>
+              <h2 className="text-2xl md:text-3xl font-semibold mb-8 md:mb-10 text-navy-900">{t('contact.emailInquiry')}</h2>
               <form onSubmit={handleSubmit} className="space-y-8">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-3">
-                    이름 <span className="text-red-500">*</span>
+                    {t('contact.name')} <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="text"
@@ -65,13 +65,13 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-navy-900 focus:border-transparent transition-all"
-                    placeholder="이름을 입력하세요"
+                    placeholder={t('contact.namePlaceholder')}
                   />
                 </div>
 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-3">
-                    이메일 <span className="text-red-500">*</span>
+                    {t('contact.email')} <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="email"
@@ -81,13 +81,13 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-navy-900 focus:border-transparent transition-all"
-                    placeholder="email@example.com"
+                    placeholder={t('contact.emailPlaceholder')}
                   />
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-3">
-                    메시지 <span className="text-red-500">*</span>
+                    {t('contact.message')} <span className="text-red-500">*</span>
                   </label>
                   <textarea
                     id="message"
@@ -97,7 +97,7 @@ const Contact = () => {
                     required
                     rows="8"
                     className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-navy-900 focus:border-transparent transition-all resize-none"
-                    placeholder="문의하실 내용을 입력하세요"
+                    placeholder={t('contact.messagePlaceholder')}
                   />
                 </div>
 
@@ -106,7 +106,7 @@ const Contact = () => {
                   disabled={isSubmitting}
                   className="w-full bg-navy-900 text-white py-4 rounded-md font-medium hover:bg-navy-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {isSubmitting ? '전송 중...' : '제출하기'}
+                  {isSubmitting ? t('contact.submitting') : t('contact.submit')}
                 </button>
               </form>
             </div>
