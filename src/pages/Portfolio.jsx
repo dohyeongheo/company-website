@@ -145,12 +145,12 @@ const Portfolio = () => {
 
               {/* Project Details */}
               <div className="border border-gray-200 rounded-lg p-6 md:p-8 lg:p-10 bg-gray-50">
-                <h3 className="text-xl md:text-2xl font-semibold mb-4 md:mb-6 text-navy-900">프로젝트 상세</h3>
+                <h3 className="text-xl md:text-2xl font-semibold mb-4 md:mb-6 text-navy-900">{t('portfolio.projectDetails')}</h3>
                 <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-6 md:mb-8">
                   {project.fullDescription}
                 </p>
                 <div>
-                  <h4 className="text-base md:text-lg font-semibold mb-3 md:mb-4 text-navy-900">사용 기술</h4>
+                  <h4 className="text-base md:text-lg font-semibold mb-3 md:mb-4 text-navy-900">{t('portfolio.usedTech')}</h4>
                   <div className="flex flex-wrap gap-2 sm:gap-3">
                     {project.tech.map((tech, techIndex) => (
                       <span
