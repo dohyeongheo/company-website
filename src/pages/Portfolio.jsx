@@ -141,15 +141,38 @@ const Portfolio = () => {
                   <div
                     key={image.id}
                     onClick={() => openModal(project, image)}
-                    className={`${image.bg} h-48 sm:h-56 md:h-64 rounded-lg flex flex-col items-center justify-center cursor-pointer hover:opacity-90 transition-all duration-300 transform hover:scale-105 relative group`}
+                    className="h-48 sm:h-56 md:h-64 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-all duration-300 transform hover:scale-105 relative group"
                   >
-                    <span className="text-white text-3xl sm:text-4xl font-semibold mb-2 sm:mb-3">
-                      {project.title.charAt(0)}
-                    </span>
-                    <span className="text-white text-xs sm:text-sm opacity-0 group-hover:opacity-100 transition-opacity px-2 text-center">
-                      {image.label}
-                    </span>
-                    <div className="absolute inset-0 border-2 border-white opacity-0 group-hover:opacity-50 rounded-lg"></div>
+                    {image.src ? (
+                      <>
+                        <img
+                          src={image.src}
+                          alt={image.label}
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                          onError={(e) => {
+                            // 이미지 로딩 실패 시 배경색 표시
+                            e.target.style.display = 'none';
+                            e.target.parentElement.classList.add(image.bg || 'bg-gray-400');
+                          }}
+                        />
+                        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                          <span className="text-white text-xs sm:text-sm opacity-0 group-hover:opacity-100 transition-opacity px-2 text-center font-medium">
+                            {image.label}
+                          </span>
+                        </div>
+                      </>
+                    ) : (
+                      // 이미지가 없을 때는 배경색과 텍스트 표시
+                      <div className={`${image.bg || 'bg-gray-400'} w-full h-full flex flex-col items-center justify-center`}>
+                        <span className="text-white text-3xl sm:text-4xl font-semibold mb-2 sm:mb-3">
+                          {project.title.charAt(0)}
+                        </span>
+                        <span className="text-white text-xs sm:text-sm opacity-0 group-hover:opacity-100 transition-opacity px-2 text-center">
+                          {image.label}
+                        </span>
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
