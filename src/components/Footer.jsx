@@ -7,8 +7,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 lg:gap-16">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-3xl font-semibold mb-6 tracking-tight">Company</h3>
-            <p className="text-gray-300 mb-8 text-lg leading-relaxed max-w-md">
+            <h3 className="text-2xl md:text-3xl font-semibold mb-4 md:mb-6 tracking-tight">Company</h3>
+            <p className="text-gray-300 mb-6 md:mb-8 text-base md:text-lg leading-relaxed max-w-md">
               고객과 함께 성장하는 신뢰의 파트너입니다.
               최고의 품질과 서비스로 고객 만족을 최우선으로 합니다.
             </p>
@@ -45,30 +45,30 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-xl font-semibold mb-6">빠른 링크</h4>
-            <ul className="space-y-4">
+            <h4 className="text-lg md:text-xl font-semibold mb-4 md:mb-6">빠른 링크</h4>
+            <ul className="space-y-3 md:space-y-4">
               <li>
-                <Link to="/" className="text-gray-300 hover:text-white transition-colors text-lg">
+                <Link to="/" className="text-gray-300 hover:text-white transition-colors text-base md:text-lg">
                   홈
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-gray-300 hover:text-white transition-colors text-lg">
+                <Link to="/about" className="text-gray-300 hover:text-white transition-colors text-base md:text-lg">
                   회사 소개
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-300 hover:text-white transition-colors text-lg">
+                <Link to="/services" className="text-gray-300 hover:text-white transition-colors text-base md:text-lg">
                   서비스
                 </Link>
               </li>
               <li>
-                <Link to="/portfolio" className="text-gray-300 hover:text-white transition-colors text-lg">
+                <Link to="/portfolio" className="text-gray-300 hover:text-white transition-colors text-base md:text-lg">
                   포트폴리오
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-gray-300 hover:text-white transition-colors text-lg">
+                <Link to="/contact" className="text-gray-300 hover:text-white transition-colors text-base md:text-lg">
                   연락처
                 </Link>
               </li>
@@ -77,7 +77,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-xl font-semibold mb-6">연락처 정보</h4>
+            <h4 className="text-lg md:text-xl font-semibold mb-4 md:mb-6">연락처 정보</h4>
             <ul className="space-y-4 text-gray-300">
               <li className="flex items-start">
                 <svg className="w-5 h-5 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
