@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://company.com/</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://company.com/?lang=ko"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://company.com/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://company.com/?lang=th"/>
+  </url>
+  
+  <!-- About Page -->
+  <url>
+    <loc>https://company.com/about</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://company.com/about?lang=ko"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://company.com/about?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://company.com/about?lang=th"/>
+  </url>
+  
+  <!-- Services Page -->
+  <url>
+    <loc>https://company.com/services</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://company.com/services?lang=ko"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://company.com/services?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://company.com/services?lang=th"/>
+  </url>
+  
+  <!-- Portfolio Page -->
+  <url>
+    <loc>https://company.com/portfolio</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://company.com/portfolio?lang=ko"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://company.com/portfolio?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://company.com/portfolio?lang=th"/>
+  </url>
+  
+  <!-- Contact Page -->
+  <url>
+    <loc>https://company.com/contact</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://company.com/contact?lang=ko"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://company.com/contact?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://company.com/contact?lang=th"/>
+  </url>
+  
+</urlset>
+
