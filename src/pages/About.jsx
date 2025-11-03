@@ -146,26 +146,26 @@ const About = () => {
       </section>
 
       {/* CEO Message Section */}
-      <section className="py-32 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          <h2 className="text-4xl md:text-5xl font-semibold text-center mb-20 text-navy-900 tracking-tight">
+      <section className="py-16 md:py-24 lg:py-32 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-center mb-12 md:mb-16 lg:mb-20 text-navy-900 tracking-tight">
             대표 인사말
           </h2>
           <div className="max-w-4xl mx-auto">
-            <div className="border border-gray-200 rounded-lg p-10 bg-white">
-              <div className="flex items-start mb-8">
-                <div className="bg-gray-100 w-20 h-20 rounded-lg flex items-center justify-center mr-6 flex-shrink-0">
-                  <svg className="w-10 h-10 text-navy-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="border border-gray-200 rounded-lg p-6 md:p-8 lg:p-10 bg-white">
+              <div className="flex items-start mb-6 md:mb-8">
+                <div className="bg-gray-100 w-16 h-16 md:w-20 md:h-20 rounded-lg flex items-center justify-center mr-4 md:mr-6 flex-shrink-0">
+                  <svg className="w-8 h-8 md:w-10 md:h-10 text-navy-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-semibold text-navy-900 mb-2">홍길동</h3>
-                  <p className="text-gray-600 text-lg">대표이사</p>
+                  <h3 className="text-xl md:text-2xl font-semibold text-navy-900 mb-2">홍길동</h3>
+                  <p className="text-gray-600 text-base md:text-lg">대표이사</p>
                 </div>
               </div>
-              <div className="space-y-6">
-                <p className="text-gray-600 text-lg leading-relaxed">
+              <div className="space-y-4 md:space-y-6">
+                <p className="text-gray-600 text-base md:text-lg leading-relaxed">
                   안녕하세요. 저희 회사를 방문해주셔서 감사합니다.
                 </p>
                 <p className="text-gray-600 text-lg leading-relaxed">
@@ -178,8 +178,8 @@ const About = () => {
                   변함없는 관심과 성원 부탁드립니다.
                 </p>
               </div>
-              <div className="mt-10 pt-8 border-t border-gray-200">
-                <p className="text-navy-900 font-semibold text-right">감사합니다.</p>
+              <div className="mt-6 md:mt-10 pt-6 md:pt-8 border-t border-gray-200">
+                <p className="text-navy-900 font-semibold text-right text-sm md:text-base">감사합니다.</p>
               </div>
             </div>
           </div>
