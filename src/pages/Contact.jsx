@@ -32,12 +32,12 @@ const Contact = () => {
   }
 
   return (
-    <div className="pt-20">
+    <div className="pt-16 md:pt-20">
       {/* Page Header */}
-      <section className="bg-navy-900 text-white py-24">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          <h1 className="text-5xl md:text-6xl font-semibold text-center tracking-tight">연락처</h1>
-          <p className="text-xl text-center mt-8 text-gray-300 max-w-2xl mx-auto">
+      <section className="bg-navy-900 text-white py-12 md:py-16 lg:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-center tracking-tight">연락처</h1>
+          <p className="text-base sm:text-lg md:text-xl text-center mt-4 md:mt-8 text-gray-300 max-w-2xl mx-auto px-4">
             궁금한 사항이 있으시면 언제든지 문의해주세요
           </p>
         </div>
