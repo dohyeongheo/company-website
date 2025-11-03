@@ -57,33 +57,33 @@ const Services = () => {
   ]
 
   return (
-    <div className="pt-20">
+    <div className="pt-16 md:pt-20">
       {/* Page Header */}
-      <section className="bg-navy-900 text-white py-24">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          <h1 className="text-5xl md:text-6xl font-semibold text-center tracking-tight">서비스</h1>
-          <p className="text-xl text-center mt-8 text-gray-300 max-w-2xl mx-auto">
+      <section className="bg-navy-900 text-white py-12 md:py-16 lg:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-center tracking-tight">서비스</h1>
+          <p className="text-base sm:text-lg md:text-xl text-center mt-4 md:mt-8 text-gray-300 max-w-2xl mx-auto px-4">
             고객의 성공을 위한 다양한 서비스를 제공합니다
           </p>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <section className="py-16 md:py-24 lg:py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="border border-gray-200 rounded-lg p-10 hover:border-navy-900 transition-all duration-300"
+                className="border border-gray-200 rounded-lg p-6 md:p-8 lg:p-10 hover:border-navy-900 transition-all duration-300"
               >
-                <div className="bg-gray-100 w-20 h-20 rounded-lg flex items-center justify-center text-navy-900 mb-8">
+                <div className="bg-gray-100 w-16 h-16 md:w-20 md:h-20 rounded-lg flex items-center justify-center text-navy-900 mb-6 md:mb-8">
                   {service.icon}
                 </div>
-                <h3 className="text-2xl font-semibold mb-6 text-navy-900">
+                <h3 className="text-xl md:text-2xl font-semibold mb-4 md:mb-6 text-navy-900">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed text-lg">
+                <p className="text-gray-600 leading-relaxed text-base md:text-lg">
                   {service.description}
                 </p>
               </div>
@@ -93,12 +93,12 @@ const Services = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-32 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          <h2 className="text-4xl md:text-5xl font-semibold text-center mb-20 text-navy-900 tracking-tight">
+      <section className="py-16 md:py-24 lg:py-32 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-center mb-12 md:mb-16 lg:mb-20 text-navy-900 tracking-tight">
             작업 프로세스
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 lg:gap-12">
             {[
               { step: '1', title: '상담', desc: '고객 요구사항 분석 및 상담' },
               { step: '2', title: '기획', desc: '전략 수립 및 계획 수립' },
@@ -106,11 +106,11 @@ const Services = () => {
               { step: '4', title: '유지보수', desc: '지속적인 지원 및 개선' },
             ].map((process, index) => (
               <div key={index} className="text-center">
-                <div className="bg-navy-900 text-white w-20 h-20 rounded-full flex items-center justify-center text-3xl font-semibold mx-auto mb-8">
+                <div className="bg-navy-900 text-white w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center text-2xl md:text-3xl font-semibold mx-auto mb-4 md:mb-6 lg:mb-8">
                   {process.step}
                 </div>
-                <h3 className="text-2xl font-semibold mb-4 text-navy-900">{process.title}</h3>
-                <p className="text-gray-600 text-lg">{process.desc}</p>
+                <h3 className="text-lg md:text-xl lg:text-2xl font-semibold mb-2 md:mb-3 lg:mb-4 text-navy-900">{process.title}</h3>
+                <p className="text-gray-600 text-sm sm:text-base md:text-lg">{process.desc}</p>
               </div>
             ))}
           </div>
