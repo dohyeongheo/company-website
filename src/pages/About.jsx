@@ -168,12 +168,12 @@ const About = () => {
                 <p className="text-gray-600 text-base md:text-lg leading-relaxed">
                   안녕하세요. 저희 회사를 방문해주셔서 감사합니다.
                 </p>
-                <p className="text-gray-600 text-lg leading-relaxed">
+                <p className="text-gray-600 text-base md:text-lg leading-relaxed">
                   저희 회사는 고객과의 신뢰를 최우선 가치로 여기며, 최고 품질의 서비스를 제공하기 위해
                   끊임없이 노력하고 있습니다. 단순히 비즈니스 관계를 넘어, 고객의 성공적인 성장을
                   함께 만들어가는 진정한 파트너가 되고자 합니다.
                 </p>
-                <p className="text-gray-600 text-lg leading-relaxed">
+                <p className="text-gray-600 text-base md:text-lg leading-relaxed">
                   앞으로도 고객 여러분과 함께 성장하고 발전해나가는 회사가 되겠습니다.
                   변함없는 관심과 성원 부탁드립니다.
                 </p>
