@@ -19,34 +19,34 @@ const Portfolio = () => {
     }
     const imageConfigs = {
       ecommerce: [
-        { id: 1, bg: 'bg-navy-800', key: 'main' },
-        { id: 2, bg: 'bg-navy-700', key: 'product' },
-        { id: 3, bg: 'bg-navy-900', key: 'cart' },
+        { id: 1, src: '/images/portfolio/ecommerce/main.jpg', bg: 'bg-navy-800', key: 'main' },
+        { id: 2, src: '/images/portfolio/ecommerce/product.jpg', bg: 'bg-navy-700', key: 'product' },
+        { id: 3, src: '/images/portfolio/ecommerce/cart.jpg', bg: 'bg-navy-900', key: 'cart' },
       ],
       healthcare: [
-        { id: 1, bg: 'bg-gray-700', key: 'home' },
-        { id: 2, bg: 'bg-gray-600', key: 'dashboard' },
-        { id: 3, bg: 'bg-gray-800', key: 'report' },
+        { id: 1, src: '/images/portfolio/healthcare/home.jpg', bg: 'bg-gray-700', key: 'home' },
+        { id: 2, src: '/images/portfolio/healthcare/dashboard.jpg', bg: 'bg-gray-600', key: 'dashboard' },
+        { id: 3, src: '/images/portfolio/healthcare/report.jpg', bg: 'bg-gray-800', key: 'report' },
       ],
       enterprise: [
-        { id: 1, bg: 'bg-navy-700', key: 'dashboard' },
-        { id: 2, bg: 'bg-navy-800', key: 'hr' },
-        { id: 3, bg: 'bg-navy-600', key: 'analytics' },
+        { id: 1, src: '/images/portfolio/enterprise/dashboard.jpg', bg: 'bg-navy-700', key: 'dashboard' },
+        { id: 2, src: '/images/portfolio/enterprise/hr.jpg', bg: 'bg-navy-800', key: 'hr' },
+        { id: 3, src: '/images/portfolio/enterprise/analytics.jpg', bg: 'bg-navy-600', key: 'analytics' },
       ],
       education: [
-        { id: 1, bg: 'bg-gray-600', key: 'courses' },
-        { id: 2, bg: 'bg-gray-700', key: 'classroom' },
-        { id: 3, bg: 'bg-gray-800', key: 'learning' },
+        { id: 1, src: '/images/portfolio/education/courses.jpg', bg: 'bg-gray-600', key: 'courses' },
+        { id: 2, src: '/images/portfolio/education/classroom.jpg', bg: 'bg-gray-700', key: 'classroom' },
+        { id: 3, src: '/images/portfolio/education/learning.jpg', bg: 'bg-gray-800', key: 'learning' },
       ],
       fintech: [
-        { id: 1, bg: 'bg-navy-800', key: 'trading' },
-        { id: 2, bg: 'bg-navy-900', key: 'portfolio' },
-        { id: 3, bg: 'bg-navy-700', key: 'history' },
+        { id: 1, src: '/images/portfolio/fintech/trading.jpg', bg: 'bg-navy-800', key: 'trading' },
+        { id: 2, src: '/images/portfolio/fintech/portfolio.jpg', bg: 'bg-navy-900', key: 'portfolio' },
+        { id: 3, src: '/images/portfolio/fintech/history.jpg', bg: 'bg-navy-700', key: 'history' },
       ],
       iot: [
-        { id: 1, bg: 'bg-gray-700', key: 'devices' },
-        { id: 2, bg: 'bg-gray-800', key: 'monitoring' },
-        { id: 3, bg: 'bg-gray-600', key: 'alerts' },
+        { id: 1, src: '/images/portfolio/iot/devices.jpg', bg: 'bg-gray-700', key: 'devices' },
+        { id: 2, src: '/images/portfolio/iot/monitoring.jpg', bg: 'bg-gray-800', key: 'monitoring' },
+        { id: 3, src: '/images/portfolio/iot/alerts.jpg', bg: 'bg-gray-600', key: 'alerts' },
       ],
     }
 
