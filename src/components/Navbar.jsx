@@ -230,12 +230,19 @@ const Navbar = () => {
                 )}
               </div>
 
-              <button
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="inline-flex items-center justify-center p-2 text-gray-700 hover:text-navy-900 focus:outline-none rounded-md hover:bg-gray-100 transition-colors"
-                aria-label={isMenuOpen ? "메뉴 닫기" : "메뉴 열기"}
-                aria-expanded={isMenuOpen}
-              >
+                  <button
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        setIsMenuOpen(!isMenuOpen);
+                      }
+                    }}
+                    className="inline-flex items-center justify-center p-2 text-gray-700 hover:text-navy-900 focus:outline-none focus:ring-2 focus:ring-navy-900 focus:ring-offset-2 rounded-md hover:bg-gray-100 transition-colors"
+                    aria-label={isMenuOpen ? "메뉴 닫기" : "메뉴 열기"}
+                    aria-expanded={isMenuOpen}
+                    aria-controls="mobile-menu"
+                  >
                 <svg className="h-6 w-6" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
                   {isMenuOpen ? <path d="M6 18L18 6M6 6l12 12" /> : <path d="M4 6h16M4 12h16M4 18h16" />}
                 </svg>
