@@ -194,22 +194,22 @@ const Contact = () => {
               </div>
 
               {/* Google Maps */}
-              <div className="border border-gray-200 rounded-lg p-10">
-                <h2 className="text-3xl font-semibold mb-6 text-navy-900">위치</h2>
+              <div className="border border-gray-200 rounded-lg p-6 md:p-8 lg:p-10">
+                <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-navy-900">위치</h2>
                 <div className="rounded-lg overflow-hidden">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.677273682431!2d127.02902631531139!3d37.50041787980728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca1580a9d74d3%3A0x5fb8a2f8e0e0e0e0!2z7Iug7ISc7Jq47Yq567OE7IucIOqwleuCqOq1rCDrgrDrrLTroZwg64Ko64-E7ZWY6rWtIDUw!5e0!3m2!1sko!2skr!4v1234567890123!5m2!1sko!2skr"
                     width="100%"
-                    height="400"
+                    height="300"
                     style={{ border: 0 }}
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     title="회사 위치 지도"
-                    className="w-full"
+                    className="w-full md:h-[400px]"
                   />
                 </div>
-                <p className="text-gray-600 text-sm mt-4">
+                <p className="text-gray-600 text-sm md:text-base mt-4">
                   서울특별시 강남구 테헤란로 123, 테헤란빌딩 5층
                 </p>
               </div>
