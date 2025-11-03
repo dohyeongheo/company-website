@@ -32,23 +32,23 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div className="bg-gray-50 rounded-lg p-12">
-              <div className="grid grid-cols-2 gap-10">
+            <div className="bg-gray-50 rounded-lg p-6 md:p-8 lg:p-12">
+              <div className="grid grid-cols-2 gap-6 md:gap-8 lg:gap-10">
                 <div className="text-center">
-                  <div className="text-5xl font-semibold text-navy-900 mb-3">10+</div>
-                  <div className="text-gray-600 text-lg">년 경력</div>
+                  <div className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy-900 mb-2 md:mb-3">10+</div>
+                  <div className="text-gray-600 text-sm sm:text-base md:text-lg">년 경력</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-5xl font-semibold text-navy-900 mb-3">500+</div>
-                  <div className="text-gray-600 text-lg">프로젝트</div>
+                  <div className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy-900 mb-2 md:mb-3">500+</div>
+                  <div className="text-gray-600 text-sm sm:text-base md:text-lg">프로젝트</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-5xl font-semibold text-navy-900 mb-3">100+</div>
-                  <div className="text-gray-600 text-lg">전문가</div>
+                  <div className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy-900 mb-2 md:mb-3">100+</div>
+                  <div className="text-gray-600 text-sm sm:text-base md:text-lg">전문가</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-5xl font-semibold text-navy-900 mb-3">1000+</div>
-                  <div className="text-gray-600 text-lg">고객사</div>
+                  <div className="text-3xl sm:text-4xl md:text-5xl font-semibold text-navy-900 mb-2 md:mb-3">1000+</div>
+                  <div className="text-gray-600 text-sm sm:text-base md:text-lg">고객사</div>
                 </div>
               </div>
             </div>
