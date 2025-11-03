@@ -331,7 +331,8 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   )
 }
 
