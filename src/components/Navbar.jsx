@@ -63,11 +63,14 @@ const Navbar = () => {
     };
 
     if (isLanguageOpenMobile) {
-      document.addEventListener("mousedown", handleClickOutside);
+      // mousedown 대신 click 이벤트 사용, 약간의 딜레이로 onClick이 먼저 실행되도록
+      setTimeout(() => {
+        document.addEventListener("click", handleClickOutside);
+      }, 0);
     }
 
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("click", handleClickOutside);
     };
   }, [isLanguageOpenMobile]);
 
