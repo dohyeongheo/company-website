@@ -56,7 +56,7 @@ const Navbar = () => {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex space-x-8 lg:space-x-10">
+            <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
@@ -68,19 +68,102 @@ const Navbar = () => {
                   {link.label}
                 </Link>
               ))}
+
+              {/* Language Selector - Desktop */}
+              <div className="relative" ref={languageDropdownRef}>
+                <button
+                  onClick={() => setIsLanguageOpen(!isLanguageOpen)}
+                  className="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-700 hover:text-navy-900 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors"
+                  aria-label="언어 선택"
+                >
+                  <span className="text-lg">{currentLanguage.flag}</span>
+                  <span className="hidden lg:inline">{currentLanguage.name}</span>
+                  <svg
+                    className={`w-4 h-4 transition-transform ${isLanguageOpen ? "rotate-180" : ""}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+
+                {isLanguageOpen && (
+                  <div className="absolute right-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg z-50">
+                    {languages.map((lang) => (
+                      <button
+                        key={lang.code}
+                        onClick={() => {
+                          setLanguage(lang.code);
+                          setIsLanguageOpen(false);
+                        }}
+                        className={`w-full flex items-center space-x-3 px-4 py-2 text-sm text-left hover:bg-gray-50 transition-colors ${
+                          language === lang.code ? "bg-navy-50 text-navy-900" : "text-gray-700"
+                        }`}
+                      >
+                        <span className="text-lg">{lang.flag}</span>
+                        <span>{lang.name}</span>
+                        {language === lang.code && (
+                          <svg className="w-4 h-4 ml-auto text-navy-900" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                          </svg>
+                        )}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
 
-            {/* Mobile menu button */}
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden inline-flex items-center justify-center p-2 text-gray-700 hover:text-navy-900 focus:outline-none rounded-md hover:bg-gray-100 transition-colors"
-              aria-label={isMenuOpen ? "메뉴 닫기" : "메뉴 열기"}
-              aria-expanded={isMenuOpen}
-            >
-              <svg className="h-6 w-6" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-                {isMenuOpen ? <path d="M6 18L18 6M6 6l12 12" /> : <path d="M4 6h16M4 12h16M4 18h16" />}
-              </svg>
-            </button>
+            {/* Mobile menu button and language selector */}
+            <div className="md:hidden flex items-center space-x-2">
+              {/* Language Selector - Mobile */}
+              <div className="relative" ref={languageDropdownRef}>
+                <button
+                  onClick={() => setIsLanguageOpen(!isLanguageOpen)}
+                  className="flex items-center p-2 text-gray-700 hover:text-navy-900 focus:outline-none rounded-md hover:bg-gray-100 transition-colors"
+                  aria-label="언어 선택"
+                >
+                  <span className="text-lg">{currentLanguage.flag}</span>
+                </button>
+
+                {isLanguageOpen && (
+                  <div className="absolute right-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg z-50">
+                    {languages.map((lang) => (
+                      <button
+                        key={lang.code}
+                        onClick={() => {
+                          setLanguage(lang.code);
+                          setIsLanguageOpen(false);
+                        }}
+                        className={`w-full flex items-center space-x-3 px-4 py-2 text-sm text-left hover:bg-gray-50 transition-colors ${
+                          language === lang.code ? "bg-navy-50 text-navy-900" : "text-gray-700"
+                        }`}
+                      >
+                        <span className="text-lg">{lang.flag}</span>
+                        <span>{lang.name}</span>
+                        {language === lang.code && (
+                          <svg className="w-4 h-4 ml-auto text-navy-900" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                          </svg>
+                        )}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="inline-flex items-center justify-center p-2 text-gray-700 hover:text-navy-900 focus:outline-none rounded-md hover:bg-gray-100 transition-colors"
+                aria-label={isMenuOpen ? "메뉴 닫기" : "메뉴 열기"}
+                aria-expanded={isMenuOpen}
+              >
+                <svg className="h-6 w-6" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                  {isMenuOpen ? <path d="M6 18L18 6M6 6l12 12" /> : <path d="M4 6h16M4 12h16M4 18h16" />}
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
 
