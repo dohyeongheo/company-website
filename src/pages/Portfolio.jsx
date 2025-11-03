@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const Portfolio = () => {
   const [selectedImage, setSelectedImage] = useState(null)
@@ -88,6 +88,25 @@ const Portfolio = () => {
     setSelectedImage(null)
     setSelectedProject(null)
   }
+
+  // ESC 키로 모달 닫기
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === 'Escape' && selectedImage) {
+        closeModal()
+      }
+    }
+
+    if (selectedImage) {
+      document.addEventListener('keydown', handleEscape)
+      document.body.style.overflow = 'hidden' // 모달 열릴 때 스크롤 방지
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleEscape)
+      document.body.style.overflow = 'unset'
+    }
+  }, [selectedImage])
 
   return (
     <div className="pt-20">
