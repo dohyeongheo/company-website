@@ -13,13 +13,16 @@ const Navbar = () => {
 
   const isActive = (path) => location.pathname === path;
 
-  const navLinks = useMemo(() => [
-    { path: "/", label: t("nav.home") },
-    { path: "/about", label: t("nav.about") },
-    { path: "/services", label: t("nav.services") },
-    { path: "/portfolio", label: t("nav.portfolio") },
-    { path: "/contact", label: t("nav.contact") },
-  ], [t, language]);
+  const navLinks = useMemo(
+    () => [
+      { path: "/", label: t("nav.home") },
+      { path: "/about", label: t("nav.about") },
+      { path: "/services", label: t("nav.services") },
+      { path: "/portfolio", label: t("nav.portfolio") },
+      { path: "/contact", label: t("nav.contact") },
+    ],
+    [t, language]
+  );
 
   const languages = [
     { code: "ko", name: "한국어", flag: "🇰🇷" },
