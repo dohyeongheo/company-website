@@ -44,9 +44,9 @@ const Contact = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+      <section className="py-16 md:py-24 lg:py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
             {/* Email Contact Form */}
             <div className="border border-gray-200 rounded-lg p-10">
               <h2 className="text-3xl font-semibold mb-10 text-navy-900">이메일 문의</h2>

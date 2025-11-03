@@ -78,17 +78,17 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
-          <h2 className="text-4xl md:text-5xl font-semibold mb-8 text-navy-900 tracking-tight">
+      <section className="py-16 md:py-24 lg:py-32 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-6 md:mb-8 text-navy-900 tracking-tight px-4">
             함께 성장할 준비가 되셨나요?
           </h2>
-          <p className="text-xl mb-12 text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl mb-8 md:mb-12 text-gray-600 max-w-2xl mx-auto px-4">
             지금 바로 문의하시면 전문 상담을 제공해드립니다.
           </p>
           <Link
             to="/contact"
-            className="bg-navy-900 text-white px-10 py-4 rounded-md font-medium hover:bg-navy-800 transition-colors inline-block"
+            className="bg-navy-900 text-white px-8 sm:px-10 py-3 sm:py-4 rounded-md font-medium hover:bg-navy-800 transition-colors inline-block text-sm sm:text-base"
           >
             연락하기
           </Link>
