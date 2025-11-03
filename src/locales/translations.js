@@ -213,6 +213,74 @@ export const translations = {
       satisfiedClients: 'Satisfied Clients',
       awards: 'Awards',
       satisfactionRate: 'Client Satisfaction',
+      projects: {
+        ecommerce: {
+          title: 'E-Commerce Platform',
+          category: 'Web Development',
+          description: 'Large-scale e-commerce platform construction project',
+          fullDescription: 'We built a large-scale e-commerce platform together with our client. We designed a stable architecture capable of handling high traffic, and implemented real-time inventory management system and payment integration features. Responsive design provides optimal user experience in all environments including mobile and desktop.',
+          images: {
+            main: 'Main Page',
+            product: 'Product Detail',
+            cart: 'Shopping Cart',
+          },
+        },
+        healthcare: {
+          title: 'Mobile Healthcare App',
+          category: 'Mobile App',
+          description: 'Mobile application providing health management and diagnosis services',
+          fullDescription: 'We developed a mobile application that tracks and analyzes user health data in real-time. It integrates with wearable devices to monitor heart rate, step count, sleep patterns, etc., and provides AI-based health reports. Designed with intuitive UI/UX so anyone can use it easily.',
+          images: {
+            home: 'Home Screen',
+            dashboard: 'Data Dashboard',
+            report: 'Health Report',
+          },
+        },
+        enterprise: {
+          title: 'Enterprise Management System',
+          category: 'Enterprise',
+          description: 'Integrated management and analysis system for large enterprises',
+          fullDescription: 'We built a comprehensive management system to improve the operational efficiency of large enterprises. It is a platform that integrates and manages work from various departments such as HR, finance, and project management. We provide real-time dashboards and advanced analytics to support management decision-making.',
+          images: {
+            dashboard: 'Dashboard',
+            hr: 'HR Management',
+            analytics: 'Analytics Report',
+          },
+        },
+        education: {
+          title: 'Education Platform',
+          category: 'Web Development',
+          description: 'Online education content delivery and learning management system',
+          fullDescription: 'We developed a comprehensive platform for online education. We provide various features such as real-time video lectures, assignment submission and grading, and learning progress management. We provide an interface optimized for both students and instructors, and include analytics tools to maximize learning effectiveness.',
+          images: {
+            courses: 'Course List',
+            classroom: 'Classroom',
+            learning: 'Learning Dashboard',
+          },
+        },
+        fintech: {
+          title: 'Fintech Solution',
+          category: 'Fintech',
+          description: 'Safe and innovative financial services platform',
+          fullDescription: 'We built a secure financial trading platform using blockchain technology. We provide various financial services such as cryptocurrency trading, smart contracts, and automated portfolio management. We combine the highest level of security with a user-friendly interface to provide an innovative financial experience.',
+          images: {
+            trading: 'Trading Screen',
+            portfolio: 'Portfolio',
+            history: 'Transaction History',
+          },
+        },
+        iot: {
+          title: 'IoT Management System',
+          category: 'IoT',
+          description: 'Internet of Things device integration management and monitoring system',
+          fullDescription: 'We developed a platform that can integrate and manage various IoT devices. We provide core functions for smart homes and smart factories such as real-time sensor data collection, remote control, and predictive maintenance. We implemented real-time communication using MQTT protocol and machine learning-based anomaly detection.',
+          images: {
+            devices: 'Device List',
+            monitoring: 'Monitoring Dashboard',
+            alerts: 'Alert Settings',
+          },
+        },
+      },
     },
     contact: {
       title: 'Contact',
