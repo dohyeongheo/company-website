@@ -278,6 +278,13 @@ export const translations = {
       goBack: 'Go Back',
       suggestions: 'You might want to try these pages instead:',
     },
+    error: {
+      title: 'An Error Occurred',
+      message: 'An unexpected error has occurred. Please refresh the page or return to the home page.',
+      details: 'Error Details',
+      reset: 'Try Again',
+      goHome: 'Go to Home',
+    },
     nav: {
       home: 'Home',
       about: 'About',
