@@ -253,9 +253,12 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         <div
+          id="mobile-menu"
           className={`md:hidden fixed inset-0 top-16 bg-white border-t border-gray-100 transform transition-transform duration-300 ease-in-out z-40 ${
             isMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
+          role="menu"
+          aria-label="모바일 메뉴"
         >
           <div className="px-4 pt-4 pb-6 space-y-1">
             {navLinks.map((link) => (
