@@ -362,6 +362,7 @@ export const translations = {
       messagePlaceholder: 'Enter your inquiry',
       submit: 'Submit',
       submitting: 'Sending...',
+      submitSuccess: 'Your inquiry has been received. We will contact you soon.',
       contactInfo: 'Contact Information',
       address: 'Address',
       phone: 'Phone',
