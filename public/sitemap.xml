@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
+
   <!-- Homepage -->
   <url>
     <loc>https://company.com/</loc>
@@ -12,7 +12,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://company.com/?lang=en"/>
     <xhtml:link rel="alternate" hreflang="th" href="https://company.com/?lang=th"/>
   </url>
-  
+
   <!-- About Page -->
   <url>
     <loc>https://company.com/about</loc>
@@ -23,7 +23,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://company.com/about?lang=en"/>
     <xhtml:link rel="alternate" hreflang="th" href="https://company.com/about?lang=th"/>
   </url>
-  
+
   <!-- Services Page -->
   <url>
     <loc>https://company.com/services</loc>
@@ -34,7 +34,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://company.com/services?lang=en"/>
     <xhtml:link rel="alternate" hreflang="th" href="https://company.com/services?lang=th"/>
   </url>
-  
+
   <!-- Portfolio Page -->
   <url>
     <loc>https://company.com/portfolio</loc>
@@ -45,7 +45,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://company.com/portfolio?lang=en"/>
     <xhtml:link rel="alternate" hreflang="th" href="https://company.com/portfolio?lang=th"/>
   </url>
-  
+
   <!-- Contact Page -->
   <url>
     <loc>https://company.com/contact</loc>
@@ -56,6 +56,5 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://company.com/contact?lang=en"/>
     <xhtml:link rel="alternate" hreflang="th" href="https://company.com/contact?lang=th"/>
   </url>
-  
-</urlset>
 
+</urlset>
