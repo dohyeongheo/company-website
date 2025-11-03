@@ -217,25 +217,25 @@ const Portfolio = () => {
             <div className="bg-white rounded-lg overflow-hidden">
               {/* Image */}
               <div
-                className={`${selectedImage.bg} h-96 md:h-[600px] flex flex-col items-center justify-center relative`}
+                className={`${selectedImage.bg} h-64 sm:h-80 md:h-96 lg:h-[600px] flex flex-col items-center justify-center relative`}
               >
-                <span className="text-white text-7xl md:text-9xl font-semibold mb-4">
+                <span className="text-white text-5xl sm:text-6xl md:text-7xl lg:text-9xl font-semibold mb-2 sm:mb-4">
                   {selectedProject.title.charAt(0)}
                 </span>
-                <span className="text-white text-2xl font-medium">
+                <span className="text-white text-base sm:text-lg md:text-xl lg:text-2xl font-medium px-4 text-center">
                   {selectedImage.label}
                 </span>
               </div>
 
               {/* Project Info */}
-              <div className="p-8">
-                <h3 className="text-3xl font-semibold mb-2 text-navy-900">
+              <div className="p-4 sm:p-6 md:p-8">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-2 text-navy-900">
                   {selectedProject.title}
                 </h3>
-                <p className="text-gray-600 text-lg mb-6">
+                <p className="text-gray-600 text-base sm:text-lg mb-4 md:mb-6">
                   {selectedImage.label}
                 </p>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
                   {selectedProject.fullDescription}
                 </p>
               </div>
