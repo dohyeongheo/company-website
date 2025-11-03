@@ -126,30 +126,30 @@ const Portfolio = () => {
           {projects.map((project, projectIndex) => (
             <div key={projectIndex} className="mb-24 last:mb-0">
               {/* Project Header */}
-              <div className="mb-12">
-                <span className="text-navy-900 text-sm font-semibold uppercase tracking-wide">
+              <div className="mb-8 md:mb-12">
+                <span className="text-navy-900 text-xs sm:text-sm font-semibold uppercase tracking-wide">
                   {project.category}
                 </span>
-                <h2 className="text-4xl md:text-5xl font-semibold mt-4 mb-6 text-navy-900 tracking-tight">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mt-3 md:mt-4 mb-4 md:mb-6 text-navy-900 tracking-tight">
                   {project.title}
                 </h2>
-                <p className="text-gray-600 text-xl leading-relaxed max-w-3xl">
+                <p className="text-gray-600 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl">
                   {project.description}
                 </p>
               </div>
 
               {/* Project Images Gallery - 3 Column Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mb-8 md:mb-10">
                 {project.images.map((image) => (
                   <div
                     key={image.id}
                     onClick={() => openModal(project, image)}
-                    className={`${image.bg} h-64 rounded-lg flex flex-col items-center justify-center cursor-pointer hover:opacity-90 transition-all duration-300 transform hover:scale-105 relative group`}
+                    className={`${image.bg} h-48 sm:h-56 md:h-64 rounded-lg flex flex-col items-center justify-center cursor-pointer hover:opacity-90 transition-all duration-300 transform hover:scale-105 relative group`}
                   >
-                    <span className="text-white text-4xl font-semibold mb-3">
+                    <span className="text-white text-3xl sm:text-4xl font-semibold mb-2 sm:mb-3">
                       {project.title.charAt(0)}
                     </span>
-                    <span className="text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                    <span className="text-white text-xs sm:text-sm opacity-0 group-hover:opacity-100 transition-opacity px-2 text-center">
                       {image.label}
                     </span>
                     <div className="absolute inset-0 border-2 border-white opacity-0 group-hover:opacity-50 rounded-lg"></div>
@@ -158,18 +158,18 @@ const Portfolio = () => {
               </div>
 
               {/* Project Details */}
-              <div className="border border-gray-200 rounded-lg p-10 bg-gray-50">
-                <h3 className="text-2xl font-semibold mb-6 text-navy-900">프로젝트 상세</h3>
-                <p className="text-gray-600 text-lg leading-relaxed mb-8">
+              <div className="border border-gray-200 rounded-lg p-6 md:p-8 lg:p-10 bg-gray-50">
+                <h3 className="text-xl md:text-2xl font-semibold mb-4 md:mb-6 text-navy-900">프로젝트 상세</h3>
+                <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-6 md:mb-8">
                   {project.fullDescription}
                 </p>
                 <div>
-                  <h4 className="text-lg font-semibold mb-4 text-navy-900">사용 기술</h4>
-                  <div className="flex flex-wrap gap-3">
+                  <h4 className="text-base md:text-lg font-semibold mb-3 md:mb-4 text-navy-900">사용 기술</h4>
+                  <div className="flex flex-wrap gap-2 sm:gap-3">
                     {project.tech.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="px-4 py-2 bg-white border border-gray-300 rounded-md text-gray-700 font-medium"
+                        className="px-3 sm:px-4 py-1.5 sm:py-2 bg-white border border-gray-300 rounded-md text-gray-700 font-medium text-sm sm:text-base"
                       >
                         {tech}
                       </span>
