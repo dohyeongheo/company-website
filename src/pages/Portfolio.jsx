@@ -1,83 +1,69 @@
 import { useState, useEffect } from 'react'
+import { useTranslation } from '../hooks/useTranslation'
 
 const Portfolio = () => {
+  const { t } = useTranslation()
   const [selectedImage, setSelectedImage] = useState(null)
   const [selectedProject, setSelectedProject] = useState(null)
 
-  const projects = [
-    {
-      title: 'E-Commerce 플랫폼',
-      category: '웹 개발',
-      description: '대규모 전자상거래 플랫폼 구축 프로젝트',
-      fullDescription: '고객사와 함께 대규모 전자상거래 플랫폼을 구축했습니다. 높은 트래픽을 처리할 수 있는 안정적인 아키텍처를 설계하고, 실시간 재고 관리 시스템과 결제 통합 기능을 구현했습니다. 반응형 디자인으로 모바일과 데스크톱 모든 환경에서 최적의 사용자 경험을 제공합니다.',
-      tech: ['React', 'Node.js', 'PostgreSQL', 'AWS'],
-      images: [
-        { id: 1, bg: 'bg-navy-800', label: '메인 페이지' },
-        { id: 2, bg: 'bg-navy-700', label: '상품 상세' },
-        { id: 3, bg: 'bg-navy-900', label: '장바구니' },
+  const getProjects = () => {
+    const projectKeys = ['ecommerce', 'healthcare', 'enterprise', 'education', 'fintech', 'iot']
+    const techStacks = {
+      ecommerce: ['React', 'Node.js', 'PostgreSQL', 'AWS'],
+      healthcare: ['React Native', 'Firebase', 'TensorFlow Lite'],
+      enterprise: ['Vue.js', 'Spring Boot', 'Oracle DB', 'Docker'],
+      education: ['Next.js', 'WebRTC', 'MongoDB', 'Stripe'],
+      fintech: ['React', 'Solidity', 'Ethereum', 'Web3.js'],
+      iot: ['Angular', 'Node.js', 'MQTT', 'InfluxDB', 'Grafana'],
+    }
+    const imageConfigs = {
+      ecommerce: [
+        { id: 1, bg: 'bg-navy-800', key: 'main' },
+        { id: 2, bg: 'bg-navy-700', key: 'product' },
+        { id: 3, bg: 'bg-navy-900', key: 'cart' },
       ],
-    },
-    {
-      title: '모바일 헬스케어 앱',
-      category: '모바일 앱',
-      description: '건강 관리 및 진단 서비스를 제공하는 모바일 애플리케이션',
-      fullDescription: '사용자의 건강 데이터를 실시간으로 추적하고 분석하는 모바일 애플리케이션을 개발했습니다. 웨어러블 디바이스와 연동하여 심박수, 걸음 수, 수면 패턴 등을 모니터링하고, AI 기반 건강 리포트를 제공합니다. 직관적인 UI/UX로 누구나 쉽게 사용할 수 있도록 설계했습니다.',
-      tech: ['React Native', 'Firebase', 'TensorFlow Lite'],
-      images: [
-        { id: 1, bg: 'bg-gray-700', label: '홈 화면' },
-        { id: 2, bg: 'bg-gray-600', label: '데이터 대시보드' },
-        { id: 3, bg: 'bg-gray-800', label: '건강 리포트' },
+      healthcare: [
+        { id: 1, bg: 'bg-gray-700', key: 'home' },
+        { id: 2, bg: 'bg-gray-600', key: 'dashboard' },
+        { id: 3, bg: 'bg-gray-800', key: 'report' },
       ],
-    },
-    {
-      title: '기업 관리 시스템',
-      category: '엔터프라이즈',
-      description: '대기업을 위한 통합 관리 및 분석 시스템',
-      fullDescription: '대기업의 업무 효율성을 높이기 위한 종합 관리 시스템을 구축했습니다. 인사, 재무, 프로젝트 관리 등 다양한 부서의 업무를 통합하여 관리할 수 있는 플랫폼입니다. 실시간 대시보드와 고급 분석 기능을 제공하여 경영진의 의사결정을 지원합니다.',
-      tech: ['Vue.js', 'Spring Boot', 'Oracle DB', 'Docker'],
-      images: [
-        { id: 1, bg: 'bg-navy-700', label: '대시보드' },
-        { id: 2, bg: 'bg-navy-800', label: '인사 관리' },
-        { id: 3, bg: 'bg-navy-600', label: '분석 리포트' },
+      enterprise: [
+        { id: 1, bg: 'bg-navy-700', key: 'dashboard' },
+        { id: 2, bg: 'bg-navy-800', key: 'hr' },
+        { id: 3, bg: 'bg-navy-600', key: 'analytics' },
       ],
-    },
-    {
-      title: '교육 플랫폼',
-      category: '웹 개발',
-      description: '온라인 교육 콘텐츠 제공 및 학습 관리 시스템',
-      fullDescription: '온라인 교육을 위한 종합 플랫폼을 개발했습니다. 실시간 화상 강의, 과제 제출 및 채점, 학습 진도 관리 등 다양한 기능을 제공합니다. 학생과 강사 모두에게 최적화된 인터페이스를 제공하며, 학습 효과를 극대화할 수 있는 분석 도구를 포함했습니다.',
-      tech: ['Next.js', 'WebRTC', 'MongoDB', 'Stripe'],
-      images: [
-        { id: 1, bg: 'bg-gray-600', label: '강의 목록' },
-        { id: 2, bg: 'bg-gray-700', label: '강의실' },
-        { id: 3, bg: 'bg-gray-800', label: '학습 대시보드' },
+      education: [
+        { id: 1, bg: 'bg-gray-600', key: 'courses' },
+        { id: 2, bg: 'bg-gray-700', key: 'classroom' },
+        { id: 3, bg: 'bg-gray-800', key: 'learning' },
       ],
-    },
-    {
-      title: '핀테크 솔루션',
-      category: '핀테크',
-      description: '안전하고 혁신적인 금융 서비스 플랫폼',
-      fullDescription: '블록체인 기술을 활용한 안전한 금융 거래 플랫폼을 구축했습니다. 암호화폐 거래, 스마트 컨트랙트, 자동화된 포트폴리오 관리 등 다양한 금융 서비스를 제공합니다. 최고 수준의 보안과 사용자 친화적인 인터페이스를 결합하여 혁신적인 금융 경험을 제공합니다.',
-      tech: ['React', 'Solidity', 'Ethereum', 'Web3.js'],
-      images: [
-        { id: 1, bg: 'bg-navy-800', label: '거래 화면' },
-        { id: 2, bg: 'bg-navy-900', label: '포트폴리오' },
-        { id: 3, bg: 'bg-navy-700', label: '거래 내역' },
+      fintech: [
+        { id: 1, bg: 'bg-navy-800', key: 'trading' },
+        { id: 2, bg: 'bg-navy-900', key: 'portfolio' },
+        { id: 3, bg: 'bg-navy-700', key: 'history' },
       ],
-    },
-    {
-      title: 'IoT 관리 시스템',
-      category: 'IoT',
-      description: '사물인터넷 기기 통합 관리 및 모니터링 시스템',
-      fullDescription: '다양한 IoT 기기를 통합하여 관리할 수 있는 플랫폼을 개발했습니다. 실시간 센서 데이터 수집, 원격 제어, 예측 유지보수 등 스마트 홈과 스마트 팩토리를 위한 핵심 기능을 제공합니다. MQTT 프로토콜을 활용한 실시간 통신과 머신러닝 기반 이상 탐지 기능을 구현했습니다.',
-      tech: ['Angular', 'Node.js', 'MQTT', 'InfluxDB', 'Grafana'],
-      images: [
-        { id: 1, bg: 'bg-gray-700', label: '기기 목록' },
-        { id: 2, bg: 'bg-gray-800', label: '모니터링 대시보드' },
-        { id: 3, bg: 'bg-gray-600', label: '알림 설정' },
+      iot: [
+        { id: 1, bg: 'bg-gray-700', key: 'devices' },
+        { id: 2, bg: 'bg-gray-800', key: 'monitoring' },
+        { id: 3, bg: 'bg-gray-600', key: 'alerts' },
       ],
-    },
-  ]
+    }
+
+    return projectKeys.map((key) => ({
+      key,
+      title: t(`portfolio.projects.${key}.title`),
+      category: t(`portfolio.projects.${key}.category`),
+      description: t(`portfolio.projects.${key}.description`),
+      fullDescription: t(`portfolio.projects.${key}.fullDescription`),
+      tech: techStacks[key],
+      images: imageConfigs[key].map((img) => ({
+        ...img,
+        label: t(`portfolio.projects.${key}.images.${img.key}`),
+      })),
+    }))
+  }
+
+  const projects = getProjects()
 
   const openModal = (project, image) => {
     setSelectedProject(project)
@@ -113,9 +99,9 @@ const Portfolio = () => {
       {/* Page Header */}
       <section className="bg-navy-900 text-white py-12 md:py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-center tracking-tight">포트폴리오</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-center tracking-tight">{t('portfolio.title')}</h1>
           <p className="text-base sm:text-lg md:text-xl text-center mt-4 md:mt-8 text-gray-300 max-w-2xl mx-auto px-4">
-            성공적으로 완료한 프로젝트들을 소개합니다
+            {t('portfolio.subtitle')}
           </p>
         </div>
       </section>
