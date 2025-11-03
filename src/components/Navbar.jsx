@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useMemo } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useLanguage } from "../contexts/LanguageContext";
 import { useTranslation } from "../hooks/useTranslation";
@@ -13,13 +13,13 @@ const Navbar = () => {
 
   const isActive = (path) => location.pathname === path;
 
-  const navLinks = [
+  const navLinks = useMemo(() => [
     { path: "/", label: t("nav.home") },
     { path: "/about", label: t("nav.about") },
     { path: "/services", label: t("nav.services") },
     { path: "/portfolio", label: t("nav.portfolio") },
     { path: "/contact", label: t("nav.contact") },
-  ];
+  ], [t, language]);
 
   const languages = [
     { code: "ko", name: "한국어", flag: "🇰🇷" },
