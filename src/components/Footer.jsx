@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom'
+import { useTranslation } from '../hooks/useTranslation'
 
 const Footer = () => {
+  const { t } = useTranslation()
+
   return (
     <footer className="bg-navy-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-12 md:py-16 lg:py-20">
@@ -9,8 +12,7 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-2xl md:text-3xl font-semibold mb-4 md:mb-6 tracking-tight">Company</h3>
             <p className="text-gray-300 mb-6 md:mb-8 text-base md:text-lg leading-relaxed max-w-md">
-              고객과 함께 성장하는 신뢰의 파트너입니다.
-              최고의 품질과 서비스로 고객 만족을 최우선으로 합니다.
+              {t('footer.description')}
             </p>
             <div className="flex space-x-6">
               <a
