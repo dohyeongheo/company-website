@@ -7,7 +7,6 @@ const Portfolio = () => {
   const [selectedProject, setSelectedProject] = useState(null)
 
   const projects = useMemo(() => {
-    const getProjects = () => {
     const projectKeys = ['ecommerce', 'healthcare', 'enterprise', 'education', 'fintech', 'iot']
     const techStacks = {
       ecommerce: ['React', 'Node.js', 'PostgreSQL', 'AWS'],
@@ -49,19 +48,6 @@ const Portfolio = () => {
         { id: 3, bg: 'bg-gray-600', key: 'alerts' },
       ],
     }
-
-    return projectKeys.map((key) => ({
-      key,
-      title: t(`portfolio.projects.${key}.title`),
-      category: t(`portfolio.projects.${key}.category`),
-      description: t(`portfolio.projects.${key}.description`),
-      fullDescription: t(`portfolio.projects.${key}.fullDescription`),
-      tech: techStacks[key],
-      images: imageConfigs[key].map((img) => ({
-        ...img,
-        label: t(`portfolio.projects.${key}.images.${img.key}`),
-      })),
-    }))
 
     return projectKeys.map((key) => ({
       key,
