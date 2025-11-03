@@ -4,17 +4,17 @@ import { translations } from '../locales/translations';
 
 export const useTranslation = () => {
   const { language } = useLanguage();
-  
+
   const t = useMemo(() => {
     return (key) => {
       const keys = key.split('.');
       let value = translations[language];
-      
+
       if (!value) {
         console.warn(`Translation missing for language: ${language}`);
         return key;
       }
-      
+
       for (const k of keys) {
         value = value?.[k];
         if (value === undefined) {
@@ -22,11 +22,11 @@ export const useTranslation = () => {
           return key;
         }
       }
-      
+
       return value || key;
     };
   }, [language]);
-  
+
   return { t, language };
 };
 
