@@ -6,7 +6,9 @@ import { useTranslation } from "../hooks/useTranslation";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
+  const [isLanguageOpenMobile, setIsLanguageOpenMobile] = useState(false);
   const languageDropdownRef = useRef(null);
+  const languageDropdownRefMobile = useRef(null);
   const location = useLocation();
   const { language, setLanguage } = useLanguage();
   const { t } = useTranslation();
