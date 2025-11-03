@@ -13,11 +13,11 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 lg:gap-20 items-center">
             <div>
-              <h2 className="text-4xl md:text-5xl font-semibold mb-10 text-navy-900 tracking-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-6 md:mb-8 lg:mb-10 text-navy-900 tracking-tight">
                 우리는 누구인가요?
               </h2>
-              <div className="space-y-6">
-                <p className="text-gray-600 text-lg leading-relaxed">
+              <div className="space-y-4 md:space-y-6">
+                <p className="text-gray-600 text-base md:text-lg leading-relaxed">
                   우리 회사는 20XX년 설립 이래, 고객 중심의 혁신적인 서비스를 제공해왔습니다.
                   최고의 품질과 전문성을 바탕으로 고객의 성공을 함께 만들어가고 있습니다.
                 </p>
