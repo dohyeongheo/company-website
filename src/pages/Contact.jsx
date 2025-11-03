@@ -63,7 +63,7 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    
+
     if (!validateForm()) {
       return
     }
@@ -77,11 +77,11 @@ const Contact = () => {
 
       // 시뮬레이션을 위한 딜레이
       await new Promise((resolve) => setTimeout(resolve, 1000))
-      
+
       setSubmitSuccess(true)
       setFormData({ name: '', email: '', message: '' })
       setErrors({})
-      
+
       // 3초 후 성공 메시지 숨기기
       setTimeout(() => {
         setSubmitSuccess(false)
@@ -124,7 +124,7 @@ const Contact = () => {
             {/* Email Contact Form */}
             <div className="border border-gray-200 rounded-lg p-6 md:p-8 lg:p-10">
               <h2 className="text-2xl md:text-3xl font-semibold mb-8 md:mb-10 text-navy-900">{t('contact.emailInquiry')}</h2>
-              
+
               {/* 성공 메시지 */}
               {submitSuccess && (
                 <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-md">

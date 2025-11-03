@@ -77,14 +77,14 @@ const Navbar = () => {
   // ESC 키로 드롭다운 닫기
   useEffect(() => {
     const handleEscape = (e) => {
-      if (e.key === 'Escape') {
+      if (e.key === "Escape") {
         setIsLanguageOpen(false);
         setIsLanguageOpenMobile(false);
       }
     };
 
-    document.addEventListener('keydown', handleEscape);
-    return () => document.removeEventListener('keydown', handleEscape);
+    document.addEventListener("keydown", handleEscape);
+    return () => document.removeEventListener("keydown", handleEscape);
   }, []);
 
   return (
@@ -110,21 +110,21 @@ const Navbar = () => {
                 </Link>
               ))}
 
-                  {/* Language Selector - Desktop */}
-                  <div className="relative" ref={languageDropdownRef}>
-                    <button
-                      onClick={() => setIsLanguageOpen(!isLanguageOpen)}
-                      onKeyDown={(e) => {
-                        if (e.key === 'Enter' || e.key === ' ') {
-                          e.preventDefault();
-                          setIsLanguageOpen(!isLanguageOpen);
-                        }
-                      }}
-                      className="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-700 hover:text-navy-900 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-navy-900 focus:ring-offset-2"
-                      aria-label="언어 선택"
-                      aria-expanded={isLanguageOpen}
-                      aria-haspopup="true"
-                    >
+              {/* Language Selector - Desktop */}
+              <div className="relative" ref={languageDropdownRef}>
+                <button
+                  onClick={() => setIsLanguageOpen(!isLanguageOpen)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      setIsLanguageOpen(!isLanguageOpen);
+                    }
+                  }}
+                  className="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-700 hover:text-navy-900 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-navy-900 focus:ring-offset-2"
+                  aria-label="언어 선택"
+                  aria-expanded={isLanguageOpen}
+                  aria-haspopup="true"
+                >
                   <span className="text-lg">{currentLanguage.flag}</span>
                   <span className="hidden lg:inline">{currentLanguage.name}</span>
                   <svg className={`w-4 h-4 transition-transform ${isLanguageOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -132,33 +132,29 @@ const Navbar = () => {
                   </svg>
                 </button>
 
-                    {isLanguageOpen && (
-                      <div 
-                        className="absolute right-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg z-50"
-                        role="menu"
-                        aria-label="언어 선택 메뉴"
+                {isLanguageOpen && (
+                  <div className="absolute right-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg z-50" role="menu" aria-label="언어 선택 메뉴">
+                    {languages.map((lang) => (
+                      <button
+                        key={lang.code}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          console.log("Language clicked (desktop):", lang.code);
+                          setLanguage(lang.code);
+                          setIsLanguageOpen(false);
+                        }}
+                        onKeyDown={(e) => {
+                          if (e.key === "Escape") {
+                            setIsLanguageOpen(false);
+                          }
+                        }}
+                        className={`w-full flex items-center space-x-3 px-4 py-2 text-sm text-left hover:bg-gray-50 transition-colors focus:outline-none focus:bg-gray-50 ${
+                          language === lang.code ? "bg-navy-50 text-navy-900" : "text-gray-700"
+                        }`}
+                        role="menuitem"
+                        aria-selected={language === lang.code}
                       >
-                        {languages.map((lang) => (
-                          <button
-                            key={lang.code}
-                            onClick={(e) => {
-                              e.preventDefault();
-                              e.stopPropagation();
-                              console.log("Language clicked (desktop):", lang.code);
-                              setLanguage(lang.code);
-                              setIsLanguageOpen(false);
-                            }}
-                            onKeyDown={(e) => {
-                              if (e.key === 'Escape') {
-                                setIsLanguageOpen(false);
-                              }
-                            }}
-                            className={`w-full flex items-center space-x-3 px-4 py-2 text-sm text-left hover:bg-gray-50 transition-colors focus:outline-none focus:bg-gray-50 ${
-                              language === lang.code ? "bg-navy-50 text-navy-900" : "text-gray-700"
-                            }`}
-                            role="menuitem"
-                            aria-selected={language === lang.code}
-                          >
                         <span className="text-lg">{lang.flag}</span>
                         <span>{lang.name}</span>
                         {language === lang.code && (
@@ -181,19 +177,19 @@ const Navbar = () => {
             <div className="md:hidden flex items-center space-x-2">
               {/* Language Selector - Mobile */}
               <div className="relative" ref={languageDropdownRefMobile}>
-                    <button
-                      onClick={() => setIsLanguageOpenMobile(!isLanguageOpenMobile)}
-                      onKeyDown={(e) => {
-                        if (e.key === 'Enter' || e.key === ' ') {
-                          e.preventDefault();
-                          setIsLanguageOpenMobile(!isLanguageOpenMobile);
-                        }
-                      }}
-                      className="flex items-center p-2 text-gray-700 hover:text-navy-900 focus:outline-none focus:ring-2 focus:ring-navy-900 focus:ring-offset-2 rounded-md hover:bg-gray-100 transition-colors"
-                      aria-label="언어 선택"
-                      aria-expanded={isLanguageOpenMobile}
-                      aria-haspopup="true"
-                    >
+                <button
+                  onClick={() => setIsLanguageOpenMobile(!isLanguageOpenMobile)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      setIsLanguageOpenMobile(!isLanguageOpenMobile);
+                    }
+                  }}
+                  className="flex items-center p-2 text-gray-700 hover:text-navy-900 focus:outline-none focus:ring-2 focus:ring-navy-900 focus:ring-offset-2 rounded-md hover:bg-gray-100 transition-colors"
+                  aria-label="언어 선택"
+                  aria-expanded={isLanguageOpenMobile}
+                  aria-haspopup="true"
+                >
                   <span className="text-lg">{currentLanguage.flag}</span>
                 </button>
 
@@ -230,19 +226,19 @@ const Navbar = () => {
                 )}
               </div>
 
-                  <button
-                    onClick={() => setIsMenuOpen(!isMenuOpen)}
-                    onKeyDown={(e) => {
-                      if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        setIsMenuOpen(!isMenuOpen);
-                      }
-                    }}
-                    className="inline-flex items-center justify-center p-2 text-gray-700 hover:text-navy-900 focus:outline-none focus:ring-2 focus:ring-navy-900 focus:ring-offset-2 rounded-md hover:bg-gray-100 transition-colors"
-                    aria-label={isMenuOpen ? "메뉴 닫기" : "메뉴 열기"}
-                    aria-expanded={isMenuOpen}
-                    aria-controls="mobile-menu"
-                  >
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    setIsMenuOpen(!isMenuOpen);
+                  }
+                }}
+                className="inline-flex items-center justify-center p-2 text-gray-700 hover:text-navy-900 focus:outline-none focus:ring-2 focus:ring-navy-900 focus:ring-offset-2 rounded-md hover:bg-gray-100 transition-colors"
+                aria-label={isMenuOpen ? "메뉴 닫기" : "메뉴 열기"}
+                aria-expanded={isMenuOpen}
+                aria-controls="mobile-menu"
+              >
                 <svg className="h-6 w-6" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
                   {isMenuOpen ? <path d="M6 18L18 6M6 6l12 12" /> : <path d="M4 6h16M4 12h16M4 18h16" />}
                 </svg>
