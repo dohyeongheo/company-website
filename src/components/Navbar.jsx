@@ -89,10 +89,10 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 bg-white border-b border-gray-100 z-50">
+      <nav className="fixed top-0 left-0 right-0 bg-white border-b border-gray-100 z-50" role="navigation" aria-label="메인 네비게이션">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
           <div className="flex justify-between items-center h-16 md:h-20">
-            <Link to="/" className="flex items-center">
+            <Link to="/" className="flex items-center" aria-label="홈으로 이동">
               <span className="text-xl md:text-2xl font-semibold text-navy-900 tracking-tight">Company</span>
             </Link>
 
