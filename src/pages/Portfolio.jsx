@@ -109,20 +109,20 @@ const Portfolio = () => {
   }, [selectedImage])
 
   return (
-    <div className="pt-20">
+    <div className="pt-16 md:pt-20">
       {/* Page Header */}
-      <section className="bg-navy-900 text-white py-24">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          <h1 className="text-5xl md:text-6xl font-semibold text-center tracking-tight">포트폴리오</h1>
-          <p className="text-xl text-center mt-8 text-gray-300 max-w-2xl mx-auto">
+      <section className="bg-navy-900 text-white py-12 md:py-16 lg:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-center tracking-tight">포트폴리오</h1>
+          <p className="text-base sm:text-lg md:text-xl text-center mt-4 md:mt-8 text-gray-300 max-w-2xl mx-auto px-4">
             성공적으로 완료한 프로젝트들을 소개합니다
           </p>
         </div>
       </section>
 
       {/* Portfolio Grid */}
-      <section className="py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <section className="py-16 md:py-24 lg:py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
           {projects.map((project, projectIndex) => (
             <div key={projectIndex} className="mb-24 last:mb-0">
               {/* Project Header */}
