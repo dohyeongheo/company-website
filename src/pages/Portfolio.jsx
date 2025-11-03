@@ -124,7 +124,7 @@ const Portfolio = () => {
       <section className="py-16 md:py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
           {projects.map((project, projectIndex) => (
-            <div key={projectIndex} className="mb-24 last:mb-0">
+            <div key={projectIndex} className="mb-16 md:mb-20 lg:mb-24 last:mb-0">
               {/* Project Header */}
               <div className="mb-8 md:mb-12">
                 <span className="text-navy-900 text-xs sm:text-sm font-semibold uppercase tracking-wide">
@@ -185,11 +185,11 @@ const Portfolio = () => {
       {/* Image Modal */}
       {selectedImage && selectedProject && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-2 sm:p-4"
           onClick={closeModal}
         >
           <div
-            className="relative max-w-6xl w-full max-h-[90vh]"
+            className="relative max-w-6xl w-full max-h-[95vh] sm:max-h-[90vh]"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
